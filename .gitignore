@@ -1,5 +1,5 @@
-# Object file
-*.o
+# macOS files
+.DS_Store
 
-# Ada Library Information
-*.ali
+# VS Code config files
+.vscode
