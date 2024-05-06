@@ -1,0 +1,324 @@
+/**********************************************************************
+* Primary external stylesheet for AVWHIMS application
+***********************************************************************/
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+/* set up some variables that we can use throughout this stylesheet */
+:root {
+  --modal-duration: 1s;
+  --primary-background: #fff;
+  --primary-color: #2e6a95;
+  --primary-text: #000;
+  --secondary-color: #be2edd;
+  --tooltip-background-color: gray;
+  --tooltip-color: #fff;
+  --nav-color: #f8f9f9;
+  --nav-text: #424949;
+  --nav-title-color: #808b96;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Lato', sans-serif;
+  background-color: var(--primary-background);
+  color: var(--primary-text);
+}
+
+aside {
+  background-color: #000;
+  border-right: 2px solid rgba(200, 200, 200, 0.3);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 50px;
+  height: 100vh;
+}
+
+aside ul {
+  list-style: none;
+}
+
+aside .action {
+  z-index: 50;
+  color: gray;
+  font-size: 18pt;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  position: relative;
+  left: -25px;
+  cursor: pointer;
+}
+
+li.action-active {
+  color: #fff;
+}
+
+.action-tooltip:hover::before {
+  position: relative;
+  z-index: 100;
+  background-color: var(--tooltip-background-color);
+  padding: 8px;
+  border-radius: 4px;
+  font-size: 12px;
+}
+
+.tooltip .action-tooltip {
+  position: absolute;
+  display: inline-block;
+  visibility: hidden;
+  background-color: var(--tooltip-background-color);
+  color: var(--tooltip-color);
+  border-radius: 2px;
+  padding: 4px;
+  text-align: center;
+  font-size: 12px;
+  transform: translate(-8px);
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+.tooltip:hover .action-tooltip {
+  visibility: visible;
+  opacity: 1;
+}
+
+nav {
+  background-color: var(--nav-color);
+  border-right: 2px solid rgba(200, 200, 200, 0.1);
+  color: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 250px;
+  height: 100vh;
+  z-index: 50;
+  transform: translate(50px);
+  transition: 0.3s ease;
+}
+
+nav.show-nav {
+  transform: translateX(-100%);
+}
+
+nav .nav-title h2 {
+  background-color: var(--primary-color);
+  text-align: center;
+  margin: 0;
+  padding: 20px;
+}
+
+nav .nav-title h3 {
+  background-color: var(--nav-title-color);
+  text-align: center;
+  margin: 0;
+  padding: 10px;
+}
+
+nav .logo {
+  padding: 30px 0;
+  text-align: center;
+}
+
+nav .logo img {
+  height: 75px;
+  width: 75px;
+  border-radius: 75px;
+}
+
+nav .username {
+  color: var(--nav-text);
+  font-size: 11pt;
+}
+
+nav ul {
+  padding: 0;
+  list-style-type: none;
+  margin: 0;
+}
+
+nav ul li {
+  border-bottom: 2px solid rgba(200, 200, 200, 0.5);
+  /* padding-left: 20px; */
+  padding: 14px 8px 14px 20px;
+}
+
+nav ul li.nav-active {
+  background-color: #BED7DC;
+  font-weight: bold;
+}
+
+nav ul li:first-of-type {
+  border-top: 2px solid rgba(200, 200, 200, 0.5);
+}
+
+nav ul li a {
+  color: var(--nav-text);
+  text-decoration: none;
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+}
+
+main {
+  transform: translateX(250px);
+  max-width: 80%;
+  transition: 0.3s;
+}
+
+main.show-nav {
+  /* width of nav */
+  transform: translateX(5px);
+  max-width: 95%;
+}
+
+header {
+  background-color: var(--primary-color);
+  color: #fff;
+  font-size: 130%;
+  position: relative;
+  padding: 25px 15px;
+  text-align: center;
+}
+
+header h1 {
+  margin: 0;
+}
+
+header p {
+  margin: 30px 0;
+}
+
+.container {
+  transform: translateX(75px);
+  max-width: 88%;
+}
+
+.container-header {
+  font-weight: normal;
+}
+
+.notification-icon {
+  position: fixed;
+  top: 0;
+  right: 0;
+  font-size: 20px;
+  color: #2E6A95;
+}
+
+.notification-icon .notification-number {
+  font-size: 16px;
+  background-color: lightgray;
+  padding: 2px 6px;
+  border-radius: 12px;
+}
+
+main .card {
+  background-color: #f8f9f9;
+  max-width: 70%;
+  margin-top: 2em;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 1em 1.5em 1.5em 1.5em;
+  border: 1px solid #eaecee;
+  border-radius: 1%;
+}
+
+main .card h1 {
+  color: var(--primary-color);
+  line-height: 85%;
+  font-size: 250%;
+}
+
+main .card h2 {
+  color: #000;
+  line-height: 90%;
+  font-size: 175%;
+}
+
+main .card .tagline {
+  color: #000;
+  font-size: 90%;
+  line-height: 85%;
+}
+
+.form-signin {
+  max-width: 350px;
+  padding: 20px 30px;
+  margin: 30px auto 20px auto;
+  background-color: var(--primary-background);
+  border: 1px solid #e5e5e5;
+  border-radius: 5px;
+  box-shadow: 10px 10px 5px gray;
+}
+
+.form-signin label {
+  width: 10em;
+  padding-right: 5em;
+  float: left;
+}
+
+.form-signin input[type="text"],
+.form-signin input[type="password"] {
+  font-size: 16px;
+  height: auto;
+  margin-top: 4px;
+  margin-bottom: 20px;
+  padding: 7px 9px;
+  max-width: 90%;
+}
+
+main .form-signin h2 {
+  margin-top: .5em;
+}
+
+/* submit button */
+input[type="submit"] {
+  background-color: var(--secondary-color);
+  border: 0;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+  padding: 8px 12px;
+}
+
+button:focus {
+  outline: none;
+}
+
+.form-signin .btn {
+  background-color: darkblue;
+  color: white;
+  padding: 8px 12px;
+  margin-right: 2em;
+  border-radius: 5px;
+}
+
+.form-signin .btn:hover {
+  background-color: darkslateblue;
+}
+
+.form-signin .btn-sso {
+  padding: 8px 12px;
+  margin-right: 2em;
+  width: 100%;
+  border-radius: 6px;
+  background-color: #3498db;
+}
+
+.form-signin .btn-sso:hover {
+  background-color: var(--primary-color);
+}
+
+footer {
+  max-width: 100%;
+  text-align: center;
+  padding: 1em;
+  font-size: small;
+  color: darkslateblue;
+}
