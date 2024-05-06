@@ -35,7 +35,7 @@ session_start();
 <body>
   <main>
     <div class="card">
-      <h1>Women's Health Management</h1>
+      <h1>Women's Health SMART App</h1>
       <p class="tagline">This is a restricted website for authorized use only.</p>
       <form class="form-signin" method="post" action="./_include/validate.php">
         <h2>Please log in</h2>
@@ -56,7 +56,6 @@ session_start();
   </main>
   <footer>
     <?php
-    // standard footer
     include "./_include/footer.php";
     ?>
   </footer>

@@ -37,16 +37,17 @@ aside {
   left: 0;
   width: 50px;
   height: 100vh;
+  z-index: 100;
 }
 
 aside ul {
-  list-style: none;
+  list-style-type: none;
 }
 
-aside .action {
+aside .action i {
   z-index: 50;
   color: gray;
-  font-size: 18pt;
+  font-size: 18px;
   padding-top: 1em;
   padding-bottom: 1em;
   position: relative;
@@ -54,13 +55,14 @@ aside .action {
   cursor: pointer;
 }
 
-li.action-active {
+li.action-active i {
   color: #fff;
 }
 
 .action-tooltip:hover::before {
   position: relative;
   z-index: 100;
+  color: var(--tooltip-color);
   background-color: var(--tooltip-background-color);
   padding: 8px;
   border-radius: 4px;
@@ -77,7 +79,7 @@ li.action-active {
   padding: 4px;
   text-align: center;
   font-size: 12px;
-  transform: translate(-8px);
+  transform: translate(8px);
   opacity: 0;
   transition: opacity 0.5s;
 }
@@ -85,6 +87,16 @@ li.action-active {
 .tooltip:hover .action-tooltip {
   visibility: visible;
   opacity: 1;
+}
+
+.toggle {
+  background-color: #000;
+  color: lightgray;
+  font-size: 20px;
+  border: none;
+  position: absolute;
+  bottom: 20px;
+  left: 8px;
 }
 
 nav {
@@ -168,7 +180,7 @@ nav ul li a:hover {
 main {
   transform: translateX(250px);
   max-width: 80%;
-  transition: 0.3s;
+  transition: 0.3s ease;
 }
 
 main.show-nav {
@@ -220,10 +232,8 @@ header p {
 
 main .card {
   background-color: #f8f9f9;
-  max-width: 70%;
+  max-width: 75%;
   margin-top: 2em;
-  margin-left: auto;
-  margin-right: auto;
   padding: 1em 1.5em 1.5em 1.5em;
   border: 1px solid #eaecee;
   border-radius: 1%;
@@ -261,6 +271,11 @@ main .card .tagline {
   width: 10em;
   padding-right: 5em;
   float: left;
+}
+
+.form-signin .form-signin-heading,
+.form-signin .checkbox {
+  margin-bottom: 10px;
 }
 
 .form-signin input[type="text"],
@@ -313,6 +328,161 @@ button:focus {
 
 .form-signin .btn-sso:hover {
   background-color: var(--primary-color);
+}
+
+.dashboard-container {
+  border: solid 1px gray;
+  margin: 0 0 20px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.dashboard-active .dashboard-content {
+  display: block;
+}
+
+.dashboard-content {
+  padding-left: 4px;
+  display: none;
+}
+
+h3.dashboard-title {
+  background-color: var(--primary-color);
+  color: #fff;
+  margin-top: 0;
+  padding: 4px 0px 4px 10px;
+}
+
+.dashboard-toggle {
+  background-color: transparent;
+  color: #fff;
+  border: 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  padding: 0;
+  position: absolute;
+  top: 8px;
+  right: 12px;
+  width: 20px;
+}
+
+.dashboard-toggle .fa-minus {
+  display: none;
+}
+
+.dashboard-active .dashboard-toggle .fa-minus {
+  display: block;
+}
+
+.dashboard-active .dashboard-toggle .fa-plus {
+  display: none;
+}
+
+.home-image {
+  border: solid 2px gainsboro;
+}
+
+/* couldn't find font-size for this class in bootstrap .css files */
+.dropdown-toggle {
+  font-size: larger;
+}
+
+/* Multi-Step Data Entry Form, e.g., New Application */
+.form-card {
+  background-color: white;
+  border: 1px solid #333;
+  border-radius: 5px;
+  padding: 1em;
+  margin: 0;
+  display: none;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: row;
+  gap: .25rem;
+  margin-bottom: 1.5em;
+}
+
+.form-group:last-child {
+  margin: 0;
+}
+
+.form-group>label {
+  font-weight: bold;
+  font-size: .9em;
+  color: #333;
+  padding: .25em;
+  width: 95px;
+  text-align: right;
+}
+
+.form-group>input {
+  border: 1px solid #333;
+  border-radius: .25em;
+  font-size: 1rem;
+  padding: .25em;
+  margin-right: 2em;
+}
+
+.step-title {
+  margin-top: 0.5rem;
+  margin-bottom: 1.5rem;
+  color: var(--primary-color);
+  text-align: center;
+  font-weight: normal;
+}
+
+.form-card.form-active {
+  display: block;
+}
+
+.form-save {
+  position: fixed;
+  right: 5em;
+  margin-right: 8px;
+}
+
+.form-submit {
+  position: fixed;
+  right: 0;
+  margin-right: 1em;
+}
+
+.progress-container {
+  position: relative;
+  margin-bottom: 40px;
+}
+
+.progress {
+  display: flex;
+  justify-content: space-between;
+  background-color: #999;
+  height: 4px;
+  align-items: center;
+  z-index: -1;
+}
+
+.progress-circle {
+  background-color: whitesmoke;
+  color: #999;
+  font-size: .85rem;
+  border: 1px solid #999;
+  border-radius: 25px;
+  height: 35px;
+  width: 95px;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.progress-circle.active {
+  background-color: var(--primary-color);
+  color: white;
 }
 
 footer {
