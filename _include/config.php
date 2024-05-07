@@ -19,15 +19,13 @@ define('GD_PASSWORD', 'AllieD#1993#Shim#2023');
 define('GD_DATABASE', 'avwhims');
 
 // Okta Oauth values for Auth Code flow for registered app (AV WHIMS)
-// [To-do: update these values after registering with Okta]
 define('OKTA_OAUTH2_ISSUER', 'https://dev-24886101.okta.com/oauth2');
-define('OKTA_OAUTH2_CLIENT_ID', '0oafupewz6zoMZvWA5d7');
-define('OKTA_OAUTH2_REDIRECT_URI', 'http://localhost/avdrms/_include/sso.php');
+define('OKTA_OAUTH2_CLIENT_ID', '0oagy10kg3X05jfgD5d7');
+define('OKTA_OAUTH2_REDIRECT_URI', 'http://localhost/avwhims/_include/sso.php');
 
-// Okta Oauth values for Access and ID Token flow for registered app (AV DRMS)
-// [To-do: update these values after registering with Okta]
+// Okta Oauth values for Access and ID Token flow for registered app (AV WHIMS)
 define('OKTA_OAUTH2_TOKEN_URL', 'https://dev-24886101.okta.com/oauth2/v1/token');
-define('OKTA_OAUTH2_CLIENT_SECRET', 'G6snx20X4Fb3E77APkRXjQtVEN_s8MmlJAnECtybsWRgg4E0ZdJRsGdembMtHDPT');
+define('OKTA_OAUTH2_CLIENT_SECRET', 'R-FYrWbr5hNgoZkZQqgkMRgITp2DhiDicdzsibYgB8luIuKgVfYC2iUg_vcb5LwI');
 
 // Security Notice Dialog Values
 define('ORGANIZATION_NAME', 'Office of Scientific Intelligence');

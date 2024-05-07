@@ -128,7 +128,7 @@ include_once '../_include/config.php';
   <main id="main">
 
     <div class="container">
-      <p>Clozapine Registry&nbsp;&nbsp;/&nbsp;&nbsp;Dashboard</p>
+      <p>Women's Health&nbsp;&nbsp;/&nbsp;&nbsp;Dashboard</p>
       <span class="notification-icon">
         <i class="fa-regular fa-bell" style="color: #2e6a95;"></i>
         <span class="notification-number">4</span>
@@ -196,7 +196,7 @@ include_once '../_include/config.php';
       <h3>Security Notice</h3>
       <hr>
       <p>This computer system is the property of the <?= ORGANIZATION_NAME . " (" . ORGANIZATION_ACRONYM . ")" ?>. By using this system, all users acknowledge notice of and agree to comply with <?= ORGANIZATION_ACRONYM ?> acceptable use policies.</p>
-      <p>This site is intended for use by authorized <?= ORGANIZATION_ACRONYM ?> network users for viewing and retrieving information only, except as otherwise explicitly authorized. All use is considered to be with an understanding and acceptance that there is no reasonable expectation of privacy for any data or transmissions on Government Intranet or Extranet (non-public) networks or systems. All transactions that occur on this system other than the viewing and downloading of website information and all data transmitted through this system are subject to review and action including (but not limited to) monitoring, recording, retrieving, copying, auditing, inspecting, investigating, restricting access, blocking, tracking, disclosing to authorized personnel, or any other authorized actions by all authorized <?= ORGANIZATION_ACRONYM ?> and law enforcement personnel. All use of this system constitues understanding and unconditional acceptance of these terms.</p>
+      <p>This site is intended for use by authorized <?= ORGANIZATION_ACRONYM ?> network users for viewing and retrieving information only, except as otherwise explicitly authorized. All use is considered to be with an understanding and acceptance that there is no reasonable expectation of privacy for any data or transmissions on Government Intranet or Extranet (non-public) networks or systems. All transactions that occur on this system are subject to review and action by <?= ORGANIZATION_ACRONYM ?> and law enforcement personnel. All use of this system constitues understanding and unconditional acceptance of these terms.</p>
       <p>Unauthozired attempts or acts to either (1) access, upload, change, or delete information on this system, (2) modify this system, (3) deny access to this system or (4) accrue resources for unauthorized use on this system are strictly prohibited. Such attempts or acts are subject to action that may result in criminal, civil, or administrative penalties.</p>
       <p>Our mission, as the <?= ORGANIZATION_NAME ?>, is <?= ORGANIZATION_MISSION ?></p>
       <br><br>

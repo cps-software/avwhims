@@ -24,7 +24,7 @@ include_once "./dbconnect.php";
 
 <body>
   <script>
-    // javascript function to load teamsite home.php page
+    // load whims main landing page
     function getHome() {
       window.location = "../dashboard/";
     }
