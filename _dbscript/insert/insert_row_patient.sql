@@ -1,9 +1,6 @@
--- Populate patient table
--- Author:  CPS
--- Created: 4/10/24
--- Comment: 
+-- Populate table: patient
 
-USE avdrms;
+USE avwhims;
 
 INSERT INTO patient (patient_rems_id, patient_nccc_id, patient_ssn, patient_firstname, patient_lastname, patient_middlename, patient_race, patient_ethnicity, patient_date_of_birth, patient_date_of_death, patient_zipcode, patient_icn, patient_dfn, created, created_by_id, last_modified, last_modified_by_id, file_location_id, patient_gender_id, mpi_sync)
 VALUES

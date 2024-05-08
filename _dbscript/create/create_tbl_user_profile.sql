@@ -1,5 +1,5 @@
 -- Create user_profile table
--- (describe table)
+-- describe table
 
 USE avwhims;
 

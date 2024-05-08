@@ -59,7 +59,6 @@ include_once '../_include/config.php';
         <i class="fa-regular fa-user-doctor">
           <span class="action-tooltip">Prescriber</span>
         </i>
-
       </li>
 
       <li id="action-pharmacy" class="tooltip">

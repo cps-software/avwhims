@@ -1,0 +1,55 @@
+/* Additional styling for the administration module */
+
+.form-control {
+    display: inline-block;
+    margin-right: 1em;
+}
+
+.form-control input[type='date'],
+.form-control select {
+    margin: 4px 0;
+    height: 24px;
+    width: 150px;
+}
+
+.form-control input[type='submit'] {
+    padding: 4px 12px;
+    border-radius: 3px;
+    /* width: 100%; */
+    background-color: #3498db;
+}
+
+table.hl7-table {
+    font-size: smaller;
+    border-collapse: collapse;
+    width: 100%;
+    text-align: left;
+}
+
+table.hl7-table th,
+table.hl7-table td {
+    padding: 8px;
+}
+
+table.hl7-table tr:nth-child(even) {
+    background-color: var(--nav-color);
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+}
+
+.table-footer {
+    background-color: aliceblue;
+    font-size: smaller;
+}
+
+.align-left {
+    float: left;
+}
+
+.align-right {
+    float: right;
+}
+
+.align-clear {
+    clear: both;
+}

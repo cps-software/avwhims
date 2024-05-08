@@ -1,9 +1,7 @@
 -- Create patient table
--- Author:  CPS
--- Created: 4/10/24
--- Comment: Initial create
+-- describe table
 
-USE avdrms;
+USE avwhims;
 
 CREATE TABLE patient
 (

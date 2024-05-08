@@ -7,20 +7,20 @@
 include_once './config.php';
 
 $servername = $_SERVER["SERVER_NAME"];
-echo $servername . "<br>";
+// echo $servername . "<br>";
 
 // determine local or remote server
 if ($servername == "localhost") {
-  echo "[01] Script: dbconnect.php<br>";
+  // echo "[01] Script: dbconnect.php<br>";
   $connection = mysqli_connect(LH_HOSTNAME, LH_USERNAME, LH_PASSWORD, LH_DATABASE);
   if (!$connection) {
     print("Could not connect to " . LH_HOSTNAME . ": " . mysqli_connect_error());
     die("<br />Terminating program </body></html>");
   } else {
-    print("MySQL connection on localhost created <br>");
+    // print("MySQL connection on localhost created <br>");
     $result = mysqli_query($connection, "SELECT DATABASE()");
     $row = mysqli_fetch_row($result);
-    print("Default database is " . $row[0] . "<br><br>");
+    // print("Default database is " . $row[0] . "<br><br>");
     // die("<br />Terminating program </body></html>");
   }
 } else if ($servername == "cpssoftware.com") {

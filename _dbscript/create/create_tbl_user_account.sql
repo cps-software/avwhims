@@ -1,5 +1,5 @@
 -- Create table: user_account
--- (provide brief descriptioin of this table)
+-- describe table
 
 USE avwhims;
 
