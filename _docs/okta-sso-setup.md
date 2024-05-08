@@ -47,7 +47,7 @@ Below is a summary of what I did to register the AV WHIMS application and enable
    - Select **Done**
 
 ### Update Your Web Application
-Update your application to follow the the OAuth back and forth flow, including handing authorization codes, etc.  
+Update your application to follow the the OAuth back and forth (multiple redirects) flow, including handling authorization codes, etc.  
 
 This isn't trivial, but it does follow a standard pattern and once you've figured it out, subsequent implementations should be straightforward.
 

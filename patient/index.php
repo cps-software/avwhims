@@ -33,82 +33,12 @@ include "../_include/dbconnect.php";
 </head>
 
 <body>
-    <!-- lefthands side VS Code-like action bar -->
-    <!-- transition this file to PHP and include aside section here -->
-    <aside>
-        <ul class="action">
+    <?php
+    // include module icon bar (lefthand side vertical area)
+    include "../_include/module.php";
+    ?>
 
-            <li id="action-dashboard" class="tooltip">
-                <i class="fa-regular fa-house">
-                    <span class="action-tooltip">Dashboard</span>
-                </i>
-            </li>
-
-            <li id="action-patient" class="tooltip action-active">
-                <i class="fa-regular fa-users-medical">
-                    <span class="action-tooltip">Patient</span>
-                </i>
-            </li>
-
-            <li id="action-report" class="tooltip">
-                <i class="fa-regular fa-file-chart-column">
-                    <span class="action-tooltip">Report</span>
-                </i>
-            </li>
-
-            <li id="action-prescriber" class="tooltip">
-                <i class="fa-regular fa-user-doctor">
-                    <span class="action-tooltip">Prescriber</span>
-                </i>
-            </li>
-
-            <li id="action-pharmacy" class="tooltip">
-                <i class="fa-regular fa-prescription-bottle-medical">
-                    <span class="action-tooltip">Pharmacy</span>
-                </i>
-            </li>
-
-            <li id="action-facility" class="tooltip">
-                <i class="fa-regular fa-hospital">
-                    <span class="action-tooltip">Facility</span>
-                </i>
-            </li>
-
-            <li id="action-contact" class="tooltip">
-                <i class="fa-regular fa-address-card">
-                    <span class="action-tooltip">Contact</span>
-                </i>
-            </li>
-
-            <li id="action-administration" class="tooltip">
-                <i class="fa-regular fa-screwdriver-wrench">
-                    <span class="action-tooltip">Administration</span>
-                </i>
-            </li>
-
-            <li id="action-log" class="tooltip">
-                <i class="fa-regular fa-list">
-                    <span class="action-tooltip">Log</span>
-                </i>
-            </li>
-
-            <li id="action-help" class="tooltip">
-                <i class="fa-regular fa-message-question">
-                    <span class="action-tooltip">Help</span>
-                </i>
-            </li>
-
-            <li id="action-profile" class="tooltip">
-                <i class="fa-regular fa-user">
-                    <span class="action-tooltip">Profile</span>
-                </i>
-            </li>
-
-        </ul>
-        <button id="toggle" class="toggle"><i class="fa fa-bars"></i></button>
-    </aside>
-
-    <!-- lefthand side navigation area -->
+    <!-- lefthand side navigation area (to right of module icon bar) -->
     <nav id="nav">
         <div class="nav-title">
             <h2>Women's Health</h2>
