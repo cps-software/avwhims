@@ -1,0 +1,10 @@
+/* Additional styling for the provider module */
+
+pre {
+  color: navy;
+  /* color: #2e6a95; */
+  /* color: darkslateblue; */
+  /* color: #424949; */
+  font-size: 10pt;
+  line-height: 175%;
+}

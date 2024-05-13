@@ -485,6 +485,19 @@ h3.dashboard-title {
   color: white;
 }
 
+strong {
+  color: var(--secondary-color);
+  font-size: smaller;
+}
+
+.container-image {
+  display: block;
+  width: 60vw;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 10px 10px 5px var(--nav-title-color);
+}
+
 footer {
   max-width: 100%;
   text-align: center;

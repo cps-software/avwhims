@@ -21,7 +21,7 @@
       </i>
     </li>
 
-    <li id="action-prescriber" class="tooltip">
+    <li id="action-provider" class="tooltip">
       <i class="fa-regular fa-user-doctor">
         <span class="action-tooltip">Provider</span>
       </i>
@@ -33,15 +33,15 @@
       </i>
     </li>
 
-    <li id="action-pharmacy" class="tooltip">
-      <i class="fa-regular fa-prescription-bottle-medical">
-        <span class="action-tooltip">Pharmacy</span>
+    <li id="action-clinical-api" class="tooltip">
+      <i class="fa-regular fa-lighthouse">
+        <span class="action-tooltip">Clinical&nbsp;API</span>
       </i>
     </li>
 
-    <li id="action-contact" class="tooltip">
-      <i class="fa-regular fa-address-card">
-        <span class="action-tooltip">Contact</span>
+    <li id="action-patient-api" class="tooltip">
+      <i class="fa-regular fa-lighthouse">
+        <span class="action-tooltip">Patient&nbsp;API</span>
       </i>
     </li>
 
@@ -51,15 +51,15 @@
       </i>
     </li>
 
-    <li id="action-administration" class="tooltip">
-      <i class="fa-regular fa-screwdriver-wrench">
-        <span class="action-tooltip">Administration</span>
-      </i>
-    </li>
-
     <li id="action-log" class="tooltip">
       <i class="fa-regular fa-list">
         <span class="action-tooltip">Log</span>
+      </i>
+    </li>
+
+    <li id="action-administration" class="tooltip">
+      <i class="fa-regular fa-screwdriver-wrench">
+        <span class="action-tooltip">Administration</span>
       </i>
     </li>
 

@@ -17,13 +17,6 @@ securityButton.addEventListener("click", () => {
     securityDialog.close();
 })
 
-// add event listener for each of the dashboard expand/collapse toggles
-dashboardToggles.forEach(dbToggle => {
-    dbToggle.addEventListener('click', () => {
-        dbToggle.parentNode.classList.toggle('dashboard-active');
-    })
-})
-
 /*************** Add New Application ***************/
 
 // set up constant to be able to select the multi-step form

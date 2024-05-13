@@ -27,6 +27,21 @@ define('OKTA_OAUTH2_REDIRECT_URI', 'http://localhost/avwhims/_include/sso.php');
 define('OKTA_OAUTH2_TOKEN_URL', 'https://dev-24886101.okta.com/oauth2/v1/token');
 define('OKTA_OAUTH2_CLIENT_SECRET', 'R-FYrWbr5hNgoZkZQqgkMRgITp2DhiDicdzsibYgB8luIuKgVfYC2iUg_vcb5LwI');
 
+// Lighthouse Provider Directory API
+define('LH_API_KEY', 'FU1jrtVhStvahCjqdYTMP1Qt5o1R6R3X');
+
+// Lighthouse Patient Health API (FHIR)
+define('PHAPI_OAUTH2_CLIENT_ID', '0oavb56g5dD3Hn1eK2p7');
+define('PHAPI_OAUTH2_CLIENT_SECRET', '1oshJERyKALcWbZtiUmLYEr6OffdUcjmCVPxvgXj8L5KJxNQd8YgDT0RBgi26sqY');
+define('PHAPI_OAUTH2_REDIRECT_URI', 'http://localhost/avwhims/_include/phapi.php');
+define('PHAPI_OAUTH2_ENVIRONMENT', 'sandbox');
+
+// Lighthouse Clinical Health API (FHIR)
+define('CHAPI_OAUTH2_CLIENT_ID', '0oavb56g5dD3Hn1eK2p7');
+define('CHAPI_OAUTH2_CLIENT_SECRET', '1oshJERyKALcWbZtiUmLYEr6OffdUcjmCVPxvgXj8L5KJxNQd8YgDT0RBgi26sqY');
+define('CHAPI_OAUTH2_REDIRECT_URI', 'http://localhost/avwhims/_include/phapi.php');
+define('CHAPI_OAUTH2_ENVIRONMENT', 'sandbox');
+
 // Security Notice Dialog Values
 define('ORGANIZATION_NAME', 'Office of Scientific Intelligence');
 define('ORGANIZATION_ACRONYM', 'OSI');
