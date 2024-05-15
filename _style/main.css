@@ -339,6 +339,7 @@ button:focus {
 
 .dashboard-active .dashboard-content {
   display: block;
+  line-height: 100%;
 }
 
 .dashboard-content {

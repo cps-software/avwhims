@@ -19,6 +19,20 @@ include "../_include/dbconnect.php";
 require "./get_metadata.php";
 
 $metadata_array = get_metadata();
+
+// parse a few values from the metadata associative array
+$openapi_version = $metadata_array['openapi'];
+$title = $metadata_array['info']['title'];
+$description = $metadata_array['info']['description'];
+
+$server_sandbox_url = $metadata_array['servers'][0]['url'];
+$server_sandbox_description = $metadata_array['servers'][0]['description'];
+$server_sandbox_version_default = $metadata_array['servers'][0]['variables']['version']['default'];
+
+$oauth_flow_sandbox_type = $metadata_array['components']['securitySchemes']['OauthFlowSandbox']['type'];
+$oauth_flow_sandbox_in = $metadata_array['components']['securitySchemes']['OauthFlowSandbox']['in'];
+$oauth_flow_sandbox_authorization_url = $metadata_array['components']['securitySchemes']['OauthFlowSandbox']['flows']['authorizationCode']['authorizationUrl'];
+$oauth_flow_sandbox_token_url = $metadata_array['components']['securitySchemes']['OauthFlowSandbox']['flows']['authorizationCode']['tokenUrl'];
 ?>
 
 <!DOCTYPE html>
@@ -75,15 +89,8 @@ $metadata_array = get_metadata();
         <h3 class="dashboard-title">Description</h3>
         <div class="dashboard-active">
           <p class="dashboard-content">
-            Dashboard content goes here. Dashboard content goes here. Dashboard content goes here. Dashboard content
-            goes here. Dashboard content goes here. Dashboard content goes here. Dashboard content goes here.
-            Dashboard
-            content goes here. Dashboard content goes here. Dashboard content goes here.
-            <br><br>
-            Dashboard content goes here. Dashboard content goes here. Dashboard content goes here. Dashboard content
-            goes here. Dashboard content goes here. Dashboard content goes here. Dashboard content goes here.
-            Dashboard
-            content goes here. Dashboard content goes here. Dashboard content goes here.
+            <?= $openapi_version . "&nbsp;&nbsp; | &nbsp;&nbsp;" . $title . "<br><br>" ?>
+            <?= $description ?>
           </p>
           <button class="dashboard-toggle">
             <i class="fa-solid fa-plus"></i>
@@ -94,34 +101,34 @@ $metadata_array = get_metadata();
       <br>
 
       <div class="dashboard-container">
-        <h3 class="dashboard-title">Pending</h3>
-        <p class="dashboard-content">
-          Dashboard content goes here. Dashboard content goes here. Dashboard content goes here.
-          <br><br>
-          Dashboard content goes here.
-        </p>
-        <button class="dashboard-toggle">
-          <i class="fa-solid fa-plus"></i>
-          <i class="fa-solid fa-minus"></i>
-        </button>
+        <h3 class="dashboard-title">Server Info</h3>
+        <div class="dashboard-active">
+          <p class="dashboard-content">
+            <?= $server_sandbox_description . "&nbsp;&nbsp; | &nbsp;&nbsp;" . $server_sandbox_version_default . "<br><br>" ?>
+            <?= $server_sandbox_url ?>
+          </p>
+          <button class="dashboard-toggle">
+            <i class="fa-solid fa-plus"></i>
+            <i class="fa-solid fa-minus"></i>
+          </button>
+        </div>
       </div>
-      <br>
 
       <div class="dashboard-container">
-        <h3 class="dashboard-title">Completed</h3>
-        <p class="dashboard-content">
-          Dashboard content goes here. Dashboard content goes here. Dashboard content goes here. Dashboard content
-          goes here. Dashboard content goes here. Dashboard content goes here.
-          <br><br>
-          Dashboard content goes here. Dashboard content goes here. Dashboard content goes here.
-          <br><br>
-          Dashboard content goes here. Dashboard content goes here. Dashboard content goes here.
-        </p>
-        <button class="dashboard-toggle">
-          <i class="fa-solid fa-plus"></i>
-          <i class="fa-solid fa-minus"></i>
-        </button>
+        <h3 class="dashboard-title">Oauth 2.0 Info</h3>
+        <div class="dashboard-active">
+          <p class="dashboard-content">
+            <?= $oauth_flow_sandbox_type . "&nbsp;&nbsp; | &nbsp;&nbsp;" . $oauth_flow_sandbox_in . "<br><br>" ?>
+            <?= $oauth_flow_sandbox_authorization_url . "<br>" ?>
+            <?= $oauth_flow_sandbox_token_url . "<br>" ?>
+          </p>
+          <button class="dashboard-toggle">
+            <i class="fa-solid fa-plus"></i>
+            <i class="fa-solid fa-minus"></i>
+          </button>
+        </div>
       </div>
+      <br>
     </div>
 
   </main>
