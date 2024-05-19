@@ -4,9 +4,7 @@
  * Process Login via Username + Password
  **********************************************************************/
 
-echo "[01] Script: login.php<br>";
-
-// Include MariaDB server and avwhims database connection Include File
+// include database server and avwhims database connection include file
 include_once "./dbconnect.php";
 ?>
 
@@ -145,10 +143,10 @@ include_once "./dbconnect.php";
           mysqli_close($connection);
           ?>
 
-        </div> <!-- well -->
-      </div> <!-- span12 -->
-    </div> <!-- row -->
-  </div> <!-- /container -->
+        </div>
+      </div>
+    </div>
+  </div>
 
 </body>
 

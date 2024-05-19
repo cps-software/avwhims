@@ -1,22 +1,18 @@
 <?php
 
 /************************************************************************
- * Lighthouse API request to HL7 FHIR Resource: Metadata
+ * Clinical Health API (FHIR) Resource: Metadata
  ************************************************************************/
 
 function get_metadata()
 {
   include '../_include/config.php';
 
-  define('BASE_URL', 'https://sandbox-api.va.gov/services/provider-directory/v0/r4/Practitioner');
-  define('RESOURCE_ID_KEY', '_id');
-  define('RESOURCE_ID_VALUE', 'I2-VLZYJVF7MOB2SFAKTAPNSQIBWZS22HGVT3A56E5D5PHDUWJGQIGQ0000');
-  define('HEADER', [
-    'accept: application/fhir+json',
-    'apikey: FU1jrtVhStvahCjqdYTMP1Qt5o1R6R3X'
-  ]);
+  // patient version
+  define('CHAPI_BASE_URL', 'https://api.va.gov/internal/docs/fhir-clinical-health/v0/openapi.json');
+  define('HEADER', ['Content-Type: text/html']); // not sure if this (or json type) is required
 
-  $full_url = BASE_URL . "?" . RESOURCE_ID_KEY . "=" . RESOURCE_ID_VALUE;
+  $full_url = CHAPI_BASE_URL;
 
   // initiate a curl session and return a handle to the session
   $ch = curl_init();
@@ -29,6 +25,14 @@ function get_metadata()
   ]);
 
   $curl_response = curl_exec($ch);
+
+  $curl_response = str_replace("# Background \\n\\n", "", $curl_response);
+  $curl_response = str_replace("# Technical overview\\n\\n", "", $curl_response);
+  $curl_response = str_replace("## Authentication and Authorization\\n\\n", "", $curl_response);
+  $curl_response = str_replace("## Test Data\\n\\n", "", $curl_response);
+  $curl_response = str_replace("\\n\\n", "<br><br>", $curl_response);
+
+
   $response_json = json_decode($curl_response, true);
 
   curl_close($ch);
