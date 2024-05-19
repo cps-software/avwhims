@@ -38,7 +38,8 @@ define('PHAPI_OAUTH2_REDIRECT_URI', 'http://localhost/avwhims/_include/phapi.php
 define('PHAPI_OAUTH2_ENVIRONMENT', 'sandbox');
 
 // Lighthouse Clinical Health API (FHIR)
-define('CHAPI_OAUTH2_CLIENT_ID', '0oavb56g5dD3Hn1eK2p7');
+define('CHAPI_OAUTH2_AUTHORIZATION_ENDPOINT', 'https://sandbox-api.va.gov/oauth2/clinical-health/v2/authorization');
+define('CHAPI_OAUTH2_CLIENT_ID', 'Lighthouse_Sandbox_7_NP');
 define('CHAPI_OAUTH2_CLIENT_SECRET', '1oshJERyKALcWbZtiUmLYEr6OffdUcjmCVPxvgXj8L5KJxNQd8YgDT0RBgi26sqY');
 define('CHAPI_OAUTH2_REDIRECT_URI', 'http://localhost/avwhims/_include/chapi.php');
 define('CHAPI_OAUTH2_ENVIRONMENT', 'sandbox');

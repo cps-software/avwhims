@@ -26,12 +26,17 @@ function get_metadata()
 
   $curl_response = curl_exec($ch);
 
+  // trim the response text some to simplify the display to user
   $curl_response = str_replace("# Background \\n\\n", "", $curl_response);
   $curl_response = str_replace("# Technical overview\\n\\n", "", $curl_response);
   $curl_response = str_replace("## Authentication and Authorization\\n\\n", "", $curl_response);
   $curl_response = str_replace("## Test Data\\n\\n", "", $curl_response);
+  $curl_response = str_replace("[FHIR](https://www.hl7.org/fhir/overview.html)", "FHIR", $curl_response);
+  $curl_response = str_replace("[HL7’s Fast Healthcare Interoperability Resources (FHIR)](https://www.hl7.org/fhir/overview.html)", "FHIR", $curl_response);
+  $curl_response = str_replace("[Veterans Health Information Systems and Technology Architecture (VistA)](https://www.oit.va.gov/Services/TRM/ToolPage.aspx?tid=8338)", "VistA", $curl_response);
+  $curl_response = str_replace("[Corporate Data Warehouse (CDW)](https://www.hsrd.research.va.gov/for_researchers/vinci/cdw.cfm)", "CDW", $curl_response);
+  $curl_response = str_replace("[Sandbox test patients](https://github.com/department-of-veterans-affairs/vets-api-clients/blob/master/test_accounts/clinical_health_test_accounts.md)", "Sandbox test patients", $curl_response);
   $curl_response = str_replace("\\n\\n", "<br><br>", $curl_response);
-
 
   $response_json = json_decode($curl_response, true);
 

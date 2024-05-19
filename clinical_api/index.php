@@ -68,8 +68,10 @@ $oauth_flow_sandbox_token_url = $metadata_array['components']['securitySchemes']
       <br><br>
     </div>
     <ul>
+      <li><a href="./patient_hapi.php">Patient (hapi)</a></li>
+      <li><a href="./condition_chapi.php">Condition (chapi)</a></li>
+      <li><a href="./condition_hapi.php">Condition (hapi)</a></li>
       <li><a href="./allergyIntollerance.php">AllergyIntollerance</a></li>
-      <li><a href="#">Condition</a></li>
       <li><a href="#">MedicationDispense</a></li>
       <li><a href="#">MedicationRequest</a></li>
       <li><a href="#">Observation</a></li>
@@ -101,7 +103,7 @@ $oauth_flow_sandbox_token_url = $metadata_array['components']['securitySchemes']
 
       echo "                   OpenAPI Description: <br>";
       echo "</pre>";
-      echo $description . "<br>";
+      echo "<span style='font-size:15px'>" . $description . "<br></span>";
       ?>
     </div>
   </main>
