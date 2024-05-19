@@ -31,6 +31,7 @@ define('OKTA_OAUTH2_CLIENT_SECRET', 'R-FYrWbr5hNgoZkZQqgkMRgITp2DhiDicdzsibYgB8l
 define('LH_API_KEY', 'FU1jrtVhStvahCjqdYTMP1Qt5o1R6R3X');
 
 // Lighthouse Patient Health API (FHIR)
+define('PHAPI_OAUTH2_AUTHORIZATION_ENDPOINT', 'https://sandbox-api.va.gov/oauth2/health/v1/authorization');
 define('PHAPI_OAUTH2_CLIENT_ID', '0oavb56g5dD3Hn1eK2p7');
 define('PHAPI_OAUTH2_CLIENT_SECRET', '1oshJERyKALcWbZtiUmLYEr6OffdUcjmCVPxvgXj8L5KJxNQd8YgDT0RBgi26sqY');
 define('PHAPI_OAUTH2_REDIRECT_URI', 'http://localhost/avwhims/_include/phapi.php');
@@ -39,7 +40,7 @@ define('PHAPI_OAUTH2_ENVIRONMENT', 'sandbox');
 // Lighthouse Clinical Health API (FHIR)
 define('CHAPI_OAUTH2_CLIENT_ID', '0oavb56g5dD3Hn1eK2p7');
 define('CHAPI_OAUTH2_CLIENT_SECRET', '1oshJERyKALcWbZtiUmLYEr6OffdUcjmCVPxvgXj8L5KJxNQd8YgDT0RBgi26sqY');
-define('CHAPI_OAUTH2_REDIRECT_URI', 'http://localhost/avwhims/_include/phapi.php');
+define('CHAPI_OAUTH2_REDIRECT_URI', 'http://localhost/avwhims/_include/chapi.php');
 define('CHAPI_OAUTH2_ENVIRONMENT', 'sandbox');
 
 // Security Notice Dialog Values

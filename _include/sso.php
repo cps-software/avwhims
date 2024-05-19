@@ -54,7 +54,7 @@ if (isset($_GET['code'])) {
   }
 } else {
   echo "You do not have an Authorization Code from Okta.<br>";
-  echo "Code: " . $_GET['code'] . "<br>";
+  echo "Code:  " . $_GET['code'] . "<br>";
   echo "State: " . $_GET['state'] . "<br>";
 
   // If you do not yet have an authorization code, script flows through to this section to start the process by

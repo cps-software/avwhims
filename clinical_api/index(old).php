@@ -1,7 +1,7 @@
 <?php
 
 /**********************************************************************
- * Women's Health Module: Patient Health API
+ * Women's Health Module: Clinical Health API
  **********************************************************************/
 
 session_start();
@@ -62,79 +62,60 @@ $oauth_flow_sandbox_token_url = $metadata_array['components']['securitySchemes']
   <nav id="nav">
     <div class="nav-title">
       <h2>Women's Health</h2>
-      <h3>Patient Health API</h3>
+      <h3>Clinical Health API</h3>
     </div>
     <div>
       <br><br>
     </div>
     <ul>
-      <li><a href="condition.php">Condition</a></li>
-      <li><a href="#">Resource Two</a></li>
-      <li><a href="#">Resource Three</a></li>
+      <li><a href="./allergyIntollerance.php">AllergyIntollerance</a></li>
+      <li><a href="#">Condition</a></li>
+      <li><a href="#">MedicationDispense</a></li>
+      <li><a href="#">MedicationRequest</a></li>
+      <li><a href="#">Observation</a></li>
+      <li><a href="#">Patient</a></li>
+      <li><a href="#">Practitioner</a></li>
     </ul>
   </nav>
 
   <main id="main">
     <div class="container">
-      <p>Women's Health&nbsp;&nbsp;/&nbsp;&nbsp;Patient Health API</p>
+      <p>Women's Health&nbsp;&nbsp;/&nbsp;&nbsp;Clinical Health API</p>
       <span class="notification-icon">
         <i class="fa-regular fa-bell" style="color: #2e6a95;"></i>
         <span class="notification-number">4</span>
       </span>
-      <h2 class="container-header">Patient Health API (FHIR)</h2>
+      <h2 class="container-header">Clinical Health API</h2>
       <br>
+      <hr>
+      <h3>Capability Statement</h3>
 
-      <div class="dashboard-container">
-        <h3 class="dashboard-title">API Description</h3>
-        <div class="dashboard-active">
-          <p class="dashboard-content">
-            <?= $openapi_version . "&nbsp;&nbsp; | &nbsp;&nbsp;" . $title . "<br><br>" ?>
-            <?= $description ?>
-          </p>
-          <button class="dashboard-toggle">
-            <i class="fa-solid fa-plus"></i>
-            <i class="fa-solid fa-minus"></i>
-          </button>
-        </div>
-      </div>
-      <br>
+      <?php
+      // parse a few values from the provider associative array
+      $resourceType = $provider_array['resourceType'];
+      $entryResourceType = $provider_array['entry'][0]['resource']['resourceType'];
+      $entryResourceId = $provider_array['entry'][0]['resource']['id'];
+      $entryResourceNameFamily = $provider_array['entry'][0]['resource']['name'][0]['family'];
+      $entryResourceNameGiven = $provider_array['entry'][0]['resource']['name'][0]['given'][0];
+      $entryResourceGender = $provider_array['entry'][0]['resource']['gender'];
+      $entryResourceQualificationCodeText = $provider_array['entry'][0]['resource']['qualification'][0]['code']['text'];
 
-      <div class="dashboard-container">
-        <h3 class="dashboard-title">Server Info</h3>
-        <div class="dashboard-active">
-          <p class="dashboard-content">
-            <?= $server_sandbox_description . "&nbsp;&nbsp; | &nbsp;&nbsp;" . $server_sandbox_version_default . "<br><br>" ?>
-            <?= $server_sandbox_url ?>
-          </p>
-          <button class="dashboard-toggle">
-            <i class="fa-solid fa-plus"></i>
-            <i class="fa-solid fa-minus"></i>
-          </button>
-        </div>
-      </div>
-
-      <div class="dashboard-container">
-        <h3 class="dashboard-title">Oauth 2.0 Info</h3>
-        <div class="dashboard-active">
-          <p class="dashboard-content">
-            <?= $oauth_flow_sandbox_type . "&nbsp;&nbsp; | &nbsp;&nbsp;" . $oauth_flow_sandbox_in . "<br><br>" ?>
-            <?= $oauth_flow_sandbox_authorization_url . "<br>" ?>
-            <?= $oauth_flow_sandbox_token_url . "<br>" ?>
-          </p>
-          <button class="dashboard-toggle">
-            <i class="fa-solid fa-plus"></i>
-            <i class="fa-solid fa-minus"></i>
-          </button>
-        </div>
-      </div>
-      <br>
+      echo "<pre>";
+      echo "                         Resource Type: " . $resourceType . "<br>";
+      echo "                   Entry Resource Type: " . $entryResourceType . "<br>";
+      echo "                     Entry Resource ID: " . $entryResourceId . "<br>";
+      echo "            Entry Resource Name Family: " . $entryResourceNameFamily . "<br>";
+      echo "             Entry Resource Name Given: " . $entryResourceNameGiven . "<br>";
+      echo "                 Entry Resource Gender: " . $entryResourceGender . "<br>";
+      echo "Entry Resource Qualification Code Text: " . $entryResourceQualificationCodeText . "<br>";
+      echo "</pre>";
+      ?>
     </div>
-
   </main>
 
   <!-- link in our script -->
   <script src="../_script/main.js"></script>
-  <!-- <script src="../_script/dashboard.js"></script> -->
+  <script src="../_script/log.js"></script>
 </body>
 
 </html>

@@ -12,13 +12,27 @@ include "../_include/session.php";
 // Pull in global constants
 include_once '../_include/config.php';
 
-// Include MariaDB server and avdrms database connection include file
+// Include database server and avdrms database connection include file
 include "../_include/dbconnect.php";
 
 // Add reference to get_metadata() function
 require "./get_metadata.php";
 
-// $metadata_array = get_metadata();
+$metadata_array = get_metadata();
+
+// parse a few values from the metadata associative array
+$openapi_version = $metadata_array['openapi'];
+$title = $metadata_array['info']['title'];
+$description = $metadata_array['info']['description'];
+
+$server_sandbox_url = $metadata_array['servers'][0]['url'];
+$server_sandbox_description = $metadata_array['servers'][0]['description'];
+$server_sandbox_version_default = $metadata_array['servers'][0]['variables']['version']['default'];
+
+$oauth_flow_sandbox_type = $metadata_array['components']['securitySchemes']['OauthFlowSandbox']['type'];
+$oauth_flow_sandbox_in = $metadata_array['components']['securitySchemes']['OauthFlowSandbox']['in'];
+$oauth_flow_sandbox_authorization_url = $metadata_array['components']['securitySchemes']['OauthFlowSandbox']['flows']['authorizationCode']['authorizationUrl'];
+$oauth_flow_sandbox_token_url = $metadata_array['components']['securitySchemes']['OauthFlowSandbox']['flows']['authorizationCode']['tokenUrl'];
 ?>
 
 <!DOCTYPE html>
@@ -74,27 +88,20 @@ require "./get_metadata.php";
       <h2 class="container-header">Clinical Health API</h2>
       <br>
       <hr>
-      <h3>Capability Statement</h3>
-
+      <h3>Metadata</h3>
       <?php
-      // parse a few values from the provider associative array
-      $resourceType = $provider_array['resourceType'];
-      $entryResourceType = $provider_array['entry'][0]['resource']['resourceType'];
-      $entryResourceId = $provider_array['entry'][0]['resource']['id'];
-      $entryResourceNameFamily = $provider_array['entry'][0]['resource']['name'][0]['family'];
-      $entryResourceNameGiven = $provider_array['entry'][0]['resource']['name'][0]['given'][0];
-      $entryResourceGender = $provider_array['entry'][0]['resource']['gender'];
-      $entryResourceQualificationCodeText = $provider_array['entry'][0]['resource']['qualification'][0]['code']['text'];
-
       echo "<pre>";
-      echo "                         Resource Type: " . $resourceType . "<br>";
-      echo "                   Entry Resource Type: " . $entryResourceType . "<br>";
-      echo "                     Entry Resource ID: " . $entryResourceId . "<br>";
-      echo "            Entry Resource Name Family: " . $entryResourceNameFamily . "<br>";
-      echo "             Entry Resource Name Given: " . $entryResourceNameGiven . "<br>";
-      echo "                 Entry Resource Gender: " . $entryResourceGender . "<br>";
-      echo "Entry Resource Qualification Code Text: " . $entryResourceQualificationCodeText . "<br>";
+      echo "                       OpenAPI Version: " . $openapi_version . "<br>";
+      echo "                         OpenAPI Title: " . $title . "<br>";
+      echo "                    Server Sandbox URL: " . $server_sandbox_url . "<br>";
+      echo "               OAuth Flow Sandbox Type: " . $oauth_flow_sandbox_type . "<br>";
+      echo "                 OAuth Flow Sandbox In: " . $oauth_flow_sandbox_in . "<br>";
+      echo "  OAuth Flow Sandbox Authorization URL: " . $oauth_flow_sandbox_authorization_url . "<br>";
+      echo "          OAuth Flow Sandbox Token URL: " . $oauth_flow_sandbox_token_url . "<br>";
+
+      echo "                   OpenAPI Description: <br>";
       echo "</pre>";
+      echo $description . "<br>";
       ?>
     </div>
   </main>

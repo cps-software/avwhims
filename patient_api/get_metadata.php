@@ -1,7 +1,7 @@
 <?php
 
 /************************************************************************
- * Lighthouse API request to HL7 FHIR Resource: Patient Health Metadata
+ * Patient Health API (FHIR) Resource: Patient Health Metadata
  ************************************************************************/
 
 function get_metadata()

@@ -10,14 +10,12 @@ session_start();
 
 include './_include/config.php';
 
-// get credentials from sign-in form and verify valid input
-
+// get user-selected action from sign-in form (can't remeember why it's being filtered)
 $action = htmlspecialchars($_POST['submit']);
 
+// based on sign-in page user selection, include proper script to continue startup flow
 if ($action == 'Log In') {
-  echo "[01] Script: validate.php<br>";
   include './login.php';
 } elseif ($action == 'Log In using Single Sign-On') {
-  echo "[02] Script: validate.php<br>";
   include './sso.php';
 }
