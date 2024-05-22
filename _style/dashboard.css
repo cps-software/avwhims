@@ -1,5 +1,102 @@
 /* Additional styling for the dashboard module */
 
+#db-container {
+  display: flex;
+  justify-content: space-around;
+}
+
+#db-container p {
+  margin: 4px;
+  width: 25%;
+  height: 75px;
+  text-align: center;
+  line-height: 125%;
+}
+
+.statistic-box {
+  border: .5px solid gray;
+  border-radius: 3px;
+  color: white;
+}
+
+#tracked-patients-box {
+  background-color: #519DE9
+}
+
+#flagged-patients-box {
+  background-color: #EF9234;
+}
+
+#due-this-week-box {
+  background-color: #7CC674;
+}
+
+#high-risk-box {
+  background-color: #A30000;
+}
+
+#graph-container {
+  display: flex;
+  justify-content: space-around;
+  color: lightslategray;
+}
+
+#pie-trimester,
+#pie-status,
+#pie-text4baby {
+  width: 175px;
+  height: 175px;
+  border: 0;
+  border-radius: 50%;
+  background-color: aliceblue;
+  line-height: 385px;
+}
+
+#pie-status {
+  background-image: conic-gradient(#BDE2B9 0 120deg, #8BC1F7 0);
+}
+
+#pie-trimester {
+  background-image: conic-gradient(#BDE2B9 90deg, #8BC1F7 0 225deg, #F9E0A2 0);
+}
+
+#pie-text4baby {
+  background-image: conic-gradient(#BDE2B9 0 215deg, #8BC1F7 0);
+}
+
+h4 {
+  color: #31363F;
+}
+
+.dashboard-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.dashboard-table td,
+.dashboard-table th {
+  border: 1px solid #B4B4B8;
+  padding: 8px;
+  font-size: smaller;
+}
+
+
+/* .dashboard-table tr:nth-child(even) {
+  background-color: ghostwhite;
+} */
+
+.dashboard-table tr:hover {
+  background-color: ghostwhite;
+}
+
+.dashboard-table th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: center;
+  background-color: #ddd;
+  color: #31363F;
+}
+
 .security-dialog {
   border-radius: 5px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);

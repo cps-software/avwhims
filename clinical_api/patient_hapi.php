@@ -112,7 +112,7 @@ $phone_type = $patient_array['telecom'][0]['use'];
 
   <!-- link in our script -->
   <script src="../_script/main.js"></script>
-  <script src="../_script/log.js"></script>
+  <!-- <script src="../_script/log.js"></script> -->
 </body>
 
 </html>

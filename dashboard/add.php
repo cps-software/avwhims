@@ -28,84 +28,14 @@ include_once '../_include/config.php';
     <link rel="stylesheet" href="https://kit.fontawesome.com/124182fb50.css" crossorigin="anonymous">
     <link rel="stylesheet" href="../_style/main.css">
     <link rel="stylesheet" href="../_style/dashboard.css">
-    <title>Clozapine Registry</title>
+    <title>Women's Health</title>
 </head>
 
 <body>
-    <!-- lefthands side VS Code-like action bar -->
-    <!-- transition this file to PHP and include aside section here -->
-    <aside>
-        <ul class="action">
-
-            <li id="action-dashboard" class="action-active tooltip">
-                <i class="fa-regular fa-house">
-                    <span class="action-tooltip">Dashboard</span>
-                </i>
-            </li>
-
-            <li id="action-patient" class="tooltip">
-                <i class="fa-regular fa-users-medical">
-                    <span class="action-tooltip">Patient</span>
-                </i>
-            </li>
-
-            <li id="action-report" class="tooltip">
-                <i class="fa-regular fa-file-chart-column">
-                    <span class="action-tooltip">Report</span>
-                </i>
-            </li>
-
-            <li id="action-prescriber" class="tooltip">
-                <i class="fa-regular fa-user-doctor">
-                    <span class="action-tooltip">Prescriber</span>
-                </i>
-            </li>
-
-            <li id="action-pharmacy" class="tooltip">
-                <i class="fa-regular fa-prescription-bottle-medical">
-                    <span class="action-tooltip">Pharmacy</span>
-                </i>
-            </li>
-
-            <li id="action-facility" class="tooltip">
-                <i class="fa-regular fa-hospital">
-                    <span class="action-tooltip">Facility</span>
-                </i>
-            </li>
-
-            <li id="action-contact" class="tooltip">
-                <i class="fa-regular fa-address-card">
-                    <span class="action-tooltip">Contact</span>
-                </i>
-            </li>
-
-            <li id="action-administration" class="tooltip">
-                <i class="fa-regular fa-screwdriver-wrench">
-                    <span class="action-tooltip">Administration</span>
-                </i>
-            </li>
-
-            <li id="action-log" class="tooltip">
-                <i class="fa-regular fa-list">
-                    <span class="action-tooltip">Log</span>
-                </i>
-            </li>
-
-            <li id="action-help" class="tooltip">
-                <i class="fa-regular fa-message-question">
-                    <span class="action-tooltip">Help</span>
-                </i>
-            </li>
-
-            <li id="action-profile" class="tooltip">
-                <i class="fa-regular fa-user">
-                    <span class="action-tooltip">Profile</span>
-                </i>
-            </li>
-
-        </ul>
-        <button id="toggle" class="toggle"><i class="fa fa-bars"></i></button>
-    </aside>
+    <?php
+    // include module icon bar (lefthand side vertical area)
+    include "../_include/module.php";
+    ?>
 
     <!-- lefthand side navigation area -->
     <nav id="nav">

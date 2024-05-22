@@ -47,12 +47,13 @@ include "../_include/dbconnect.php";
         <div>
             <br><br>
         </div>
-        <!-- <ul>
-            <li></li>
-            <li><a href="#">Security Events</a></li>
-            <li class="nav-active"><a href="hl7.php">HL7 Messages</a></li>
-            <li><a href="#">User Logs</a></li>
-        </ul> -->
+        <ul>
+            <li><a href="#">Track a Patient</a></li>
+            <!-- <li class="nav-active"><a href="#">Next Item</a></li> -->
+            <li><a href="#">Tracking History</a></li>
+            <li><a href="#">Education Items</a></li>
+            <li><a href="#">Checklist</a></li>
+        </ul>
     </nav>
 
     <main id="main">

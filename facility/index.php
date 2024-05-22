@@ -1,7 +1,7 @@
 <?php
 
 /**********************************************************************
- * Women's Health Module: Report
+ * Women's Health Module: Facility
  **********************************************************************/
 
 session_start();
@@ -15,10 +15,6 @@ include_once '../_include/config.php';
 // Include MariaDB server and avdrms database connection include file
 include "../_include/dbconnect.php";
 
-// Add reference to get_metadata() function
-require "./get_metadata.php";
-
-// $metadata_array = get_metadata();
 ?>
 
 <!DOCTYPE html>
@@ -48,32 +44,30 @@ require "./get_metadata.php";
   <nav id="nav">
     <div class="nav-title">
       <h2>Women's Health</h2>
-      <h3>Report</h3>
+      <h3>Facility</h3>
     </div>
     <div>
       <br><br>
     </div>
     <ul>
-      <li><a href="#">Report One</a></li>
-      <li><a href="#">Report Two</a></li>
-      <li><a href="#">Report Three</a></li>
-      <li><a href="#">Report Four</a></li>
-      <li><a href="#">Report Five</a></li>
+      <li><a href="#">Function One</a></li>
+      <li><a href="#">Function Two</a></li>
+      <li><a href="#">Function Three</a></li>
     </ul>
   </nav>
 
   <main id="main">
     <div class="container">
-      <p>Women's Health&nbsp;&nbsp;/&nbsp;&nbsp;Report</p>
+      <p>Women's Health&nbsp;&nbsp;/&nbsp;&nbsp;Facility</p>
       <span class="notification-icon">
         <i class="fa-regular fa-bell" style="color: #2e6a95;"></i>
         <span class="notification-number">4</span>
       </span>
-      <h2 class="container-header">Report</h2>
+      <h2 class="container-header">Facility</h2>
       <br>
       <hr>
       <br>
-      <img src="../_image/jmu-msu.png" alt="JMU and MSI logos" class="container-image">
+      <img src="../_image/pexels-cat.jpg" alt="Cute Cat Image" class="container-image">
     </div>
   </main>
 

@@ -6,11 +6,12 @@ const toggle = document.getElementById('toggle');
 const actionDashboard = document.getElementById('action-dashboard');
 const actionPatient = document.getElementById('action-patient');
 const actionProvider = document.getElementById('action-provider');
+const actionFacility = document.getElementById('action-facility');
 const actionClinicalApi = document.getElementById('action-clinical-api');
 const actionPatientApi = document.getElementById('action-patient-api');
 const actionReport = document.getElementById('action-report');
 const actionAdministration = document.getElementById('action-administration');
-const actionLog = document.getElementById('action-log');
+const actionHelp = document.getElementById('action-help');
 const actionProfile = document.getElementById('action-profile');
 
 const dashboardToggles = document.querySelectorAll('.dashboard-toggle');
@@ -44,6 +45,11 @@ actionProvider.addEventListener('click', () => {
   window.location = "../provider";
 });
 
+// Add Event Listener to actionFacility element to load log page
+actionFacility.addEventListener('click', () => {
+  window.location = "../facility";
+});
+
 // Add Event Listener to actionClinicalApi element to load report page
 actionClinicalApi.addEventListener('click', () => {
   window.location = "../clinical_api";
@@ -64,15 +70,9 @@ actionAdministration.addEventListener('click', () => {
   window.location = "../administration/";
 });
 
-// Add Event Listener to actionLogs element to load log page
-actionLog.addEventListener('click', () => {
-  window.location = "../log/";
-});
-
 // Add Event Listener to actionProfile element to load profile page
 actionProfile.addEventListener('click', () => {
   window.location = "../profile/";
-  // window.location = "/avdrms/profile/";
 });
 
 // add event listener for each of the dashboard expand/collapse toggles

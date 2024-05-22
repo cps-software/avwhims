@@ -137,7 +137,7 @@ include_once "./dbconnect.php";
             session_destroy();
             print("<hr>");
             print("<h3>");
-            print("<a class='btn' href='.' >Try Again</a>");
+            print("<a class='btn' href='/avwhims' >Try Again</a>");
             print("</h3>");
           }
           mysqli_close($connection);

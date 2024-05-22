@@ -51,12 +51,6 @@
       </i>
     </li>
 
-    <li id="action-log" class="tooltip">
-      <i class="fa-regular fa-list">
-        <span class="action-tooltip">Log</span>
-      </i>
-    </li>
-
     <li id="action-administration" class="tooltip">
       <i class="fa-regular fa-screwdriver-wrench">
         <span class="action-tooltip">Administration</span>

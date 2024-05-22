@@ -27,6 +27,7 @@ include_once '../_include/config.php';
   <link rel="stylesheet" href="https://kit.fontawesome.com/124182fb50.css" crossorigin="anonymous">
   <link rel="stylesheet" href="../_style/main.css">
   <link rel="stylesheet" href="../_style/dashboard.css">
+  <link rel="stylesheet" href="../_style/log.css">
   <title>Women's Health</title>
 </head>
 
@@ -46,10 +47,11 @@ include_once '../_include/config.php';
       <br><br>
     </div>
     <ul>
+      <li><a href="#">Tracked Patients</a></li>
+      <li><a href="#">Flagged Patients</a></li>
+      <li><a href="#">Due this Week</a></li>
+      <li><a href="#">High Risk</a></li>
       <li><a href="add.php">Add New Application</a></li>
-      <li><a href="#">Change Monitoring Frequency</a></li>
-      <li><a href="#">Add Override Request</a></li>
-      <li><a href="#">Terminate Clozapine</a></li>
     </ul>
   </nav>
 
@@ -64,73 +66,131 @@ include_once '../_include/config.php';
       <h2 class="container-header">Dashboard</h2>
       <br>
 
-      <div class="dashboard-container">
-        <h3 class="dashboard-title">To Do</h3>
-        <div class="dashboard-active">
-          <p class="dashboard-content">
-            Dashboard content goes here. Dashboard content goes here. Dashboard content goes here. Dashboard content
-            goes here. Dashboard content goes here. Dashboard content goes here. Dashboard content goes here.
-            Dashboard
-            content goes here. Dashboard content goes here. Dashboard content goes here.
-            <br><br>
-            Dashboard content goes here. Dashboard content goes here. Dashboard content goes here. Dashboard content
-            goes here. Dashboard content goes here. Dashboard content goes here. Dashboard content goes here.
-            Dashboard
-            content goes here. Dashboard content goes here. Dashboard content goes here.
-          </p>
-          <button class="dashboard-toggle">
-            <i class="fa-solid fa-plus"></i>
-            <i class="fa-solid fa-minus"></i>
-          </button>
-        </div>
+      <div id="db-container">
+        <p id="tracked-patients-box" class="statistic-box"><br>42<br>Tracked Patients</p>
+        <p id="flagged-patients-box" class="statistic-box"><br>9<br>Flagged Patients</p>
+        <p id="due-this-week-box" class="statistic-box"><br>3<br>Due this Week</p>
+        <p id="high-risk-box" class="statistic-box"><br>1<br>High Risk</p>
       </div>
+
       <br>
-
-      <div class="dashboard-container">
-        <h3 class="dashboard-title">Pending</h3>
-        <p class="dashboard-content">
-          Dashboard content goes here. Dashboard content goes here. Dashboard content goes here.
-          <br><br>
-          Dashboard content goes here.
-        </p>
-        <button class="dashboard-toggle">
-          <i class="fa-solid fa-plus"></i>
-          <i class="fa-solid fa-minus"></i>
-        </button>
+      <div id="graph-container">
+        <p id="pie-status">Prenatal / Postnatal</p>
+        <p id="pie-trimester">Patients by Trimester</p>
+        <p id="pie-text4baby">Text4Baby Enrollment</p>
       </div>
-      <br>
 
-      <div class="dashboard-container">
-        <h3 class="dashboard-title">Completed</h3>
-        <p class="dashboard-content">
-          Dashboard content goes here. Dashboard content goes here. Dashboard content goes here. Dashboard content
-          goes here. Dashboard content goes here. Dashboard content goes here.
-          <br><br>
-          Dashboard content goes here. Dashboard content goes here. Dashboard content goes here.
-          <br><br>
-          Dashboard content goes here. Dashboard content goes here. Dashboard content goes here.
-        </p>
-        <button class="dashboard-toggle">
-          <i class="fa-solid fa-plus"></i>
-          <i class="fa-solid fa-minus"></i>
-        </button>
+      <br><br><br>
+      <div id="items-due-container">
+        <!-- <h4>Items Due</h4> -->
+        <table class="dashboard-table">
+          <tr>
+            <th>Flag</th>
+            <th>Patient</th>
+            <th>Last 4</th>
+            <th>Pregnancy State</th>
+            <th>High Risk</th>
+            <th>Last Contact</th>
+            <th>Next Contact</th>
+            <th>Next Item Due</th>
+          </tr>
+          <tr>
+            <td style='text-align: center; color: #EF9234'>
+              <i class='fa-duotone fa-flag fa-lg'></i>
+            </td>
+            <td>Patient, Brooke Anne</td>
+            <td>4567</td>
+            <td>Prenatal</td>
+            <td style='text-align: center; color: #A30000;'>
+              <i class='fa-regular fa-circle-check fa-lg'></i>
+            </td>
+            <td>06/30/2024</td>
+            <td>06/30/2024</td>
+            <td>06/30/2024</td>
+          </tr>
+          <tr>
+            <td>&nbsp;</td>
+            <td>Onetwothree, Fourfivesix</td>
+            <td>1234</td>
+            <td>First Trimester</td>
+            <td>&nbsp;</td>
+            <td>07/01/2024</td>
+            <td>07/01/2024</td>
+            <td>07/01/2024</td>
+          </tr>
+          <tr>
+            <td style='text-align: center; color: #EF9234'>
+              <i class='fa-duotone fa-flag fa-lg'></i>
+            </td>
+            <td>Lastname, Firstname</td>
+            <td>0202</td>
+            <td>Second Trimester</td>
+            <td style='text-align: center; color: #A30000;'>
+              <i class='fa-regular fa-circle-check fa-lg'></i>
+            </td>
+            <td>07/01/2024</td>
+            <td>07/01/2024</td>
+            <td>07/01/2024</td>
+          </tr>
+          <tr>
+            <td style='text-align: center; color: #EF9234'>
+              <i class='fa-duotone fa-flag fa-lg'></i>
+            </td>
+            <td>Bell, Alexandra Graham</td>
+            <td>0101</td>
+            <td>Third Trimester</td>
+            <td style='text-align: center; color: #A30000;'>
+              <i class='fa-regular fa-circle-check fa-lg'></i>
+            </td>
+            <td>07/05/2024</td>
+            <td>07/05/2024</td>
+            <td>07/05/2024</td>
+          </tr>
+          <tr>
+            <td style='text-align: center; color: #EF9234'>
+              <i class='fa-duotone fa-flag fa-lg'></i>
+            </td>
+            <td>Personname, Personname</td>
+            <td>1235</td>
+            <td>Postnatal</td>
+            <td>&nbsp;</td>
+            <td>07/05/2024</td>
+            <td>07/05/2024</td>
+            <td>07/05/2024</td>
+          </tr>
+          <tr>
+            <td>&nbsp;</td>
+            <td>Onetwothree, Fourfivesix</td>
+            <td>1234</td>
+            <td>First Trimester</td>
+            <td>&nbsp;</td>
+            <td>07/01/2024</td>
+            <td>07/01/2024</td>
+            <td>07/01/2024</td>
+          </tr>
+        </table>
       </div>
-    </div>
 
-    <!-- Present first time access security disclaimer model -->
-    <!-- JS listener helps with this -->
+      <div class="table-footer">
+        <p class="align-left">Showing 1 to 6 of 42 rows</p>
+        <p class="align-right"><a href="#">Show All</a></p>
+      </div>
+      <div class="align-clear"></div>
 
-    <dialog id='security-dialog' class='security-dialog'>
-      <h3>Security Notice</h3>
-      <hr>
-      <p>This computer system is the property of the <?= ORGANIZATION_NAME . " (" . ORGANIZATION_ACRONYM . ")" ?>. By using this system, all users acknowledge notice of and agree to comply with <?= ORGANIZATION_ACRONYM ?> acceptable use policies.</p>
-      <p>This site is intended for use by authorized <?= ORGANIZATION_ACRONYM ?> network users for viewing and retrieving information only, except as otherwise explicitly authorized. All use is considered to be with an understanding and acceptance that there is no reasonable expectation of privacy for any data or transmissions on Government Intranet or Extranet (non-public) networks or systems. All transactions that occur on this system are subject to review and action by <?= ORGANIZATION_ACRONYM ?> and law enforcement personnel. All use of this system constitues understanding and unconditional acceptance of these terms.</p>
-      <p>Unauthozired attempts or acts to either (1) access, upload, change, or delete information on this system, (2) modify this system, (3) deny access to this system or (4) accrue resources for unauthorized use on this system are strictly prohibited. Such attempts or acts are subject to action that may result in criminal, civil, or administrative penalties.</p>
-      <p>Our mission, as the <?= ORGANIZATION_NAME ?>, is <?= ORGANIZATION_MISSION ?></p>
-      <br><br>
-      <!-- <img src="../_image/va-logo.jpeg" class="security-image" alt="Department of Veterans Affairs Logo"> -->
-      <button id='security-button' class='security-button'>I have read and accept this security notice</button>
-    </dialog>
+      <!-- Present first time access security disclaimer model -->
+      <!-- JS listener helps with this -->
+
+      <dialog id='security-dialog' class='security-dialog'>
+        <h3>Security Notice</h3>
+        <hr>
+        <p>This computer system is the property of the <?= ORGANIZATION_NAME . " (" . ORGANIZATION_ACRONYM . ")" ?>. By using this system, all users acknowledge notice of and agree to comply with <?= ORGANIZATION_ACRONYM ?> acceptable use policies.</p>
+        <p>This site is intended for use by authorized <?= ORGANIZATION_ACRONYM ?> network users for viewing and retrieving information only, except as otherwise explicitly authorized. All use is considered to be with an understanding and acceptance that there is no reasonable expectation of privacy for any data or transmissions on Government Intranet or Extranet (non-public) networks or systems. All transactions that occur on this system are subject to review and action by <?= ORGANIZATION_ACRONYM ?> and law enforcement personnel. All use of this system constitues understanding and unconditional acceptance of these terms.</p>
+        <p>Unauthozired attempts or acts to either (1) access, upload, change, or delete information on this system, (2) modify this system, (3) deny access to this system or (4) accrue resources for unauthorized use on this system are strictly prohibited. Such attempts or acts are subject to action that may result in criminal, civil, or administrative penalties.</p>
+        <p>Our mission, as the <?= ORGANIZATION_NAME ?>, is <?= ORGANIZATION_MISSION ?></p>
+        <br><br>
+        <!-- <img src="../_image/va-logo.jpeg" class="security-image" alt="Department of Veterans Affairs Logo"> -->
+        <button id='security-button' class='security-button'>I have read and accept this security notice</button>
+      </dialog>
 
   </main>
 
