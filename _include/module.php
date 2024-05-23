@@ -9,7 +9,7 @@
 <aside>
   <ul class="action">
 
-    <li id="action-dashboard" class="action-active tooltip">
+    <li id="action-dashboard" class="tooltip">
       <i class="fa-regular fa-house">
         <span class="action-tooltip">Dashboard</span>
       </i>

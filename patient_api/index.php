@@ -135,6 +135,9 @@ $oauth_flow_sandbox_token_url = $metadata_array['components']['securitySchemes']
   <!-- link in our script -->
   <script src="../_script/main.js"></script>
   <!-- <script src="../_script/dashboard.js"></script> -->
+  <script>
+    toggleModuleIcon('action-patient-api')
+  </script>
 </body>
 
 </html>

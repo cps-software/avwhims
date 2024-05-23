@@ -80,4 +80,9 @@ dashboardToggles.forEach(dbToggle => {
   dbToggle.addEventListener('click', () => {
     dbToggle.parentNode.classList.toggle('dashboard-active');
   })
-})
+});
+
+// add module list action-active class to make icon white
+function toggleModuleIcon(module) {
+  document.getElementById(module).classList.toggle('action-active');
+}

@@ -80,37 +80,6 @@ include "../_include/session.php";
                 </div>
             </div>
             <br>
-
-            <!-- <div class="dashboard-container">
-                <h3 class="dashboard-title">Pending</h3>
-                <p class="dashboard-content">
-                    Dashboard content goes here. Dashboard content goes here. Dashboard content goes here.
-                    <br><br>
-                    Dashboard content goes here.
-                </p>
-                <button class="dashboard-toggle">
-                    <i class="fa-solid fa-plus"></i>
-                    <i class="fa-solid fa-minus"></i>
-                </button>
-            </div>
-            <br>
-
-            <div class="dashboard-container">
-                <h3 class="dashboard-title">Completed</h3>
-                <p class="dashboard-content">
-                    Dashboard content goes here. Dashboard content goes here. Dashboard content goes here. Dashboard content
-                    goes here. Dashboard content goes here. Dashboard content goes here.
-                    <br><br>
-                    Dashboard content goes here. Dashboard content goes here. Dashboard content goes here.
-                    <br><br>
-                    Dashboard content goes here. Dashboard content goes here. Dashboard content goes here.
-                </p>
-                <button class="dashboard-toggle">
-                    <i class="fa-solid fa-plus"></i>
-                    <i class="fa-solid fa-minus"></i>
-                </button>
-            </div> -->
-
         </div>
 
     </main>
@@ -118,6 +87,9 @@ include "../_include/session.php";
     <!-- link in our script -->
     <script src="../_script/main.js"></script>
     <script src="../_script/administration.js"></script>
+    <script>
+        toggleModuleIcon('action-log')
+    </script>
 </body>
 
 </html>

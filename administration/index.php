@@ -123,6 +123,9 @@ include "../_include/session.php";
     <!-- link in our script -->
     <script src="../_script/main.js"></script>
     <script src="../_script/administration.js"></script>
+    <script>
+        toggleModuleIcon('action-administration')
+    </script>
 </body>
 
 </html>

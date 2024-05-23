@@ -80,6 +80,9 @@ require "./get_metadata.php";
   <!-- link in our script -->
   <script src="../_script/main.js"></script>
   <script src="../_script/log.js"></script>
+  <script>
+    toggleModuleIcon('action-report')
+  </script>
 </body>
 
 </html>

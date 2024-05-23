@@ -197,6 +197,9 @@ include_once '../_include/config.php';
   <!-- link in our script -->
   <script src="../_script/main.js"></script>
   <script src="../_script/dashboard.js"></script>
+  <script>
+    toggleModuleIcon('action-dashboard')
+  </script>
 </body>
 
 </html>

@@ -116,6 +116,9 @@ $provider_array = get_provider();
   <!-- link in our script -->
   <script src="../_script/main.js"></script>
   <script src="../_script/log.js"></script>
+  <script>
+    toggleModuleIcon('action-provider')
+  </script>
 </body>
 
 </html>
