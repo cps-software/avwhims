@@ -1,0 +1,27 @@
+table {
+  border-collapse: collapse;
+  border-top: 1px solid;
+  border-bottom: 1px solid;
+  margin: 20px 0 20px 0;
+  font-size: 0.95em;
+  width: 100%;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+tr {
+  background-color: #eeeeee;
+}
+
+tr:nth-child(even) {
+  background-color: #d8d8d8;
+}
+
+th {
+  padding: 5px 4px;
+  text-align: left;
+}
+
+td {
+  padding: 3px 4px;
+  text-align: left;
+}

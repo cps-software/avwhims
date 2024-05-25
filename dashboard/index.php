@@ -51,7 +51,7 @@ include_once '../_include/config.php';
       <li><a href="#">Flagged Patients</a></li>
       <li><a href="#">Due this Week</a></li>
       <li><a href="#">High Risk</a></li>
-      <li><a href="add.php">Add New Application</a></li>
+      <li><a href="add.php">Add New Patient</a></li>
     </ul>
   </nav>
 
@@ -173,7 +173,7 @@ include_once '../_include/config.php';
 
       <div class="table-footer">
         <p class="align-left">Showing 1 to 6 of 42 rows</p>
-        <p class="align-right"><a href="#">Show All</a></p>
+        <p class="align-right"><a href="#">My List</a>&nbsp; | &nbsp;<a href="#">Show All</a>&nbsp;&nbsp;</p>
       </div>
       <div class="align-clear"></div>
 

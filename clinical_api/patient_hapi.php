@@ -119,7 +119,7 @@ $phone_type = $patient_array['telecom'][0]['use'];
 
 <?php
 /************************************************************************
- * Get Patient HAPI ===> working on this function <===
+ * Get Patient HAPI
  ************************************************************************/
 
 function get_patient_hapi($patient_id)

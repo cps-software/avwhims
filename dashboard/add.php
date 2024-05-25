@@ -47,22 +47,23 @@ include_once '../_include/config.php';
             <br><br>
         </div>
         <ul>
-            <li class="nav-active"><a href="add.php">Add New Application</a></li>
-            <li><a href="#">Change Monitoring Frequency</a></li>
-            <li><a href="#">Add Override Request</a></li>
-            <li><a href="#">Terminate Clozapine</a></li>
+            <li><a href="#">Tracked Patients</a></li>
+            <li><a href="#">Flagged Patients</a></li>
+            <li><a href="#">Due this Week</a></li>
+            <li><a href="#">High Risk</a></li>
+            <li class="nav-active"><a href="add.php">Add New Patient</a></li>
         </ul>
     </nav>
 
     <main id="main">
 
         <div class="container">
-            <p>Clozapine Registry&nbsp;&nbsp;/&nbsp;&nbsp;Dashboard&nbsp;&nbsp;/&nbsp;&nbsp;Add New Application</p>
+            <p>Clozapine Registry&nbsp;&nbsp;/&nbsp;&nbsp;Dashboard&nbsp;&nbsp;/&nbsp;&nbsp;Add New Patient</p>
             <span class="notification-icon">
                 <i class="fa-regular fa-bell" style="color: #2e6a95;"></i>
                 <span class="notification-number">4</span>
             </span>
-            <h2 class="container-header">Add New Application</h2>
+            <h2 class="container-header">Add New Patient</h2>
             <br>
 
             <!-- multi-step progress bar goes in this area -->
@@ -93,9 +94,9 @@ include_once '../_include/config.php';
                     </div>
                     <div class="form-group">
                         <label for="patient-lastname">Last Name</label>
-                        <input type="text" id="patient-lastname" name="patient-lastname" value="Alexander" disabled>
+                        <input type="text" id="patient-lastname" name="patient-lastname" value="Steeplechase" disabled>
                         <label for="patient-firstname">First Name</label>
-                        <input type="text" id="patient-firstname" name="patient-firstname" value="Dwayne" disabled>
+                        <input type="text" id="patient-firstname" name="patient-firstname" value="Delilah" disabled>
                         <label for="patient-middlename">Middle Name</label>
                         <input type="text" id="patient-middlename" name="patient-middlename" value="Q" disabled>
                     </div>
