@@ -25,3 +25,12 @@ td {
   padding: 3px 4px;
   text-align: left;
 }
+
+td a {
+  text-decoration: none;
+  color: #000;
+}
+
+td a:hover {
+  text-decoration: underline;
+}

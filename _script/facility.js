@@ -58,8 +58,6 @@ function getFacilityJson() {
 }
 
 function getFacility(qualifier, page) {
-  // facilityDisplay.innerHTML += "Running function to get facilities (page " + page + ")...<br>";
-
   let data = null;
   let req = BASE_URL + "?type=" + HEALTH_TYPE + "&page=" + page + "&per_page=" + PER_PAGE;
 
@@ -81,6 +79,7 @@ function getFacility(qualifier, page) {
         facilityDisplay.innerHTML = req + '<br><br>' + prettyValue;
       } else if (qualifier === 'report') {
         let facilityReport = req + '<br><br>';
+
         // parse JSON payload to get specific values for the specified keys
         const sizeOfJsonArray = jsonValue.data.length;
 
@@ -99,9 +98,9 @@ function getFacility(qualifier, page) {
         for (i = 0; i < sizeOfJsonArray; i++) {
           facilityReport +=
             `<tr>` +
-            `<td>${jsonValue.data[i].id}</td> ` +
-            `<td>${jsonValue.data[i].attributes.parent.id}</td> ` +
-            `<td>${jsonValue.data[i].attributes.name}</td> ` +
+            `<td><a href="#">${jsonValue.data[i].id}</a></td> ` +
+            `<td><a href="#">${jsonValue.data[i].attributes.parent.id}</a></td> ` +
+            `<td><a href="#">${jsonValue.data[i].attributes.name}</a></td> ` +
             `<td>${jsonValue.data[i].attributes.address.physical.city}</td> ` +
             `<td>${jsonValue.data[i].attributes.address.physical.state}</td> ` +
             `<td>${jsonValue.data[i].attributes.visn}</td> ` +
@@ -119,7 +118,6 @@ function getFacility(qualifier, page) {
   xhr.open('GET', req);
   xhr.setRequestHeader('apikey', API_KEY);
   xhr.setRequestHeader('accept', ACCEPT_TYPE);
-  // xhr.setRequestHeader('Access-Control-Allow-Origin', 'https://sandbox-api.va.gov');
   xhr.send(data);
 }
 
