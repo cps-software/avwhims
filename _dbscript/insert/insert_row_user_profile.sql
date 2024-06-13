@@ -7,4 +7,5 @@ VALUES
 ('1','Chuck','Sylvester','872','','','System Administrator','profile-user-1.jpeg','MacBook Pro','1','1','1'),
 ('2','Heather','Chatwin','888','','','System Administrator','profile-user-0.png','MacBook Pro','1','1','1'),
 ('3','Test','User','911','','','System Administrator','profile-user-0.png','MacBook Pro','1','1','1'),
-('4','Lucy','Palmer','911','','','System Administrator','profile-user-4.jpg','MacBook Pro','1','1','1');
+('4','Lucy','Palmer','911','','','System Administrator','profile-user-4.jpg','MacBook Pro','1','1','1'),
+('5','Marcella','Gonzalez Rojas','911','','','UI/UX Designer','profile-user-5.png','MacBook Pro','1','1','1');

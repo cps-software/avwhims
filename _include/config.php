@@ -14,8 +14,8 @@ define('LH_DATABASE', 'avwhims');
 // MariaDB database - remote (GoDaddy)
 define('GD_HOSTNAME', 'localhost');
 define('GD_DB_PORT', 3306);
-define('GD_USERNAME', 'avdrmsdb');
-define('GD_PASSWORD', 'AllieD#1993#Shim#2023');
+define('GD_USERNAME', 'avwhimsdb');
+define('GD_PASSWORD', 'AllieD#2024#Shim');
 define('GD_DATABASE', 'avwhims');
 
 // Okta Oauth values for Auth Code flow for registered app (AV WHIMS)
