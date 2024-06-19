@@ -19,12 +19,12 @@ include "../_include/session.php";
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="AV DRMS Web Application">
     <meta name="author" content="csylvester">
-    <link rel="shortcut icon" href="../_image/star-logo.png">
+    <link rel="shortcut icon" href="../_resource/image/star-logo.png">
 
     <!-- link in fontawesome (minified version)-->
     <link rel="stylesheet" href="https://kit.fontawesome.com/124182fb50.css" crossorigin="anonymous">
-    <link rel="stylesheet" href="../_style/main.css">
-    <link rel="stylesheet" href="../_style/administration.css">
+    <link rel="stylesheet" href="../_resource/style/main.css">
+    <link rel="stylesheet" href="../_resource/style/administration.css">
     <title>Women's Health</title>
 </head>
 
@@ -121,8 +121,8 @@ include "../_include/session.php";
     </main>
 
     <!-- link in our script -->
-    <script src="../_script/main.js"></script>
-    <script src="../_script/administration.js"></script>
+    <script src="../_resource/script/main.js"></script>
+    <script src="../_resource/script/administration.js"></script>
     <script>
         toggleModuleIcon('action-administration')
     </script>

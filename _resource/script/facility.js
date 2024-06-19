@@ -33,9 +33,9 @@ function getPreviousPage() {
     page--;
   }
   else {
-    // var audio = new Audio('../_image/impact-rubble-smash-betacut-1-00-01.mp3');
-    // var audio = new Audio('../_image/dj-air-horn-jam-fx-1-00-04.mp3');
-    var audio = new Audio('../_image/Dance-the-Night-Away.m4a');
+    // var audio = new Audio('../_resource/image/impact-rubble-smash-betacut-1-00-01.mp3');
+    // var audio = new Audio('../_resource/image/dj-air-horn-jam-fx-1-00-04.mp3');
+    var audio = new Audio('../_resource/image/Dance-the-Night-Away.m4a');
     audio.play();
 
   }

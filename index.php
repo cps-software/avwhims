@@ -22,8 +22,8 @@ session_start();
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="WHIMS Women's Health Management Reference Application">
   <meta name="author" content="csylvester">
-  <link rel="shortcut icon" href="./_image/star-logo.png">
-  <link rel="stylesheet" href="./_style/main.css">
+  <link rel="shortcut icon" href="./_resource/image/star-logo.png">
+  <link rel="stylesheet" href="./_resource/style/main.css">
   <title>AVWHIMS</title>
 
   <!-- clear cookie session variable so startup modal displays on first visit -->

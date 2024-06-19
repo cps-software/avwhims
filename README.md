@@ -1,5 +1,5 @@
 # AV WHIMS
-Women's Health Interactive Management System.
+Women's Health Interactive Management System
 
 A reference application for collaborative delivery and management of women's healthcare.
 

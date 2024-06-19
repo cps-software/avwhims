@@ -17,7 +17,7 @@ include_once "./dbconnect.php";
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="">
   <meta name="author" content="">
-  <link href="../_style/main.css" rel="stylesheet">
+  <link href="../_resource/style/main.css" rel="stylesheet">
 </head>
 
 <body>

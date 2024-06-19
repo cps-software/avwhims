@@ -22,12 +22,12 @@ include_once '../_include/config.php';
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="AV DRMS Web Application">
     <meta name="author" content="csylvester">
-    <link rel="shortcut icon" href="../_image/avdrms-logo.png">
+    <link rel="shortcut icon" href="../_resource/image/star-logo.png">
 
     <!-- link in fontawesome (minified version) -->
     <link rel="stylesheet" href="https://kit.fontawesome.com/124182fb50.css" crossorigin="anonymous">
-    <link rel="stylesheet" href="../_style/main.css">
-    <link rel="stylesheet" href="../_style/dashboard.css">
+    <link rel="stylesheet" href="../_resource/style/main.css">
+    <link rel="stylesheet" href="../_resource/style/dashboard.css">
     <title>Women's Health</title>
 </head>
 
@@ -40,7 +40,7 @@ include_once '../_include/config.php';
     <!-- lefthand side navigation area -->
     <nav id="nav">
         <div class="nav-title">
-            <h2>Clozapine Registry</h2>
+            <h2>Women's Health</h2>
             <h3>Dashboard</h3>
         </div>
         <div>
@@ -315,8 +315,8 @@ include_once '../_include/config.php';
     </main>
 
     <!-- link in our script -->
-    <script src="../_script/main.js"></script>
-    <script src="../_script/dashboard.js"></script>
+    <script src="../_resource/script/main.js"></script>
+    <script src="../_resource/script/dashboard.js"></script>
 </body>
 
 </html>

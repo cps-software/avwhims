@@ -42,12 +42,12 @@ $phone_type = $patient_array['telecom'][0]['use'];
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="AV WHIMS Web Application">
   <meta name="author" content="csylvester">
-  <link rel="shortcut icon" href="../_image/star-logo.png">
+  <link rel="shortcut icon" href="../_resource/image/star-logo.png">
   <!-- link in fontawesome (minified version)-->
   <link rel="stylesheet" href="https://kit.fontawesome.com/124182fb50.css" crossorigin="anonymous">
-  <link rel="stylesheet" href="../_style/main.css">
-  <link rel="stylesheet" href="../_style/log.css">
-  <link rel="stylesheet" href="../_style/provider.css">
+  <link rel="stylesheet" href="../_resource/style/main.css">
+  <link rel="stylesheet" href="../_resource/style/log.css">
+  <link rel="stylesheet" href="../_resource/style/provider.css">
   <title>Women's Health</title>
 </head>
 
@@ -111,8 +111,7 @@ $phone_type = $patient_array['telecom'][0]['use'];
   </main>
 
   <!-- link in our script -->
-  <script src="../_script/main.js"></script>
-  <!-- <script src="../_script/log.js"></script> -->
+  <script src="../_resource/script/main.js"></script>
 </body>
 
 </html>
