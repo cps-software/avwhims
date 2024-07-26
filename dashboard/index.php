@@ -67,24 +67,24 @@ include_once '../_include/config.php';
       <br>
 
       <div id="db-container">
-        <p id="tracked-patients-box" class="statistic-box"><br>42<br>Tracked Patients</p>
-        <p id="flagged-patients-box" class="statistic-box"><br>9<br>Flagged Patients</p>
-        <p id="due-this-week-box" class="statistic-box"><br>3<br>Due this Week</p>
-        <p id="high-risk-box" class="statistic-box"><br>1<br>High Risk</p>
+        <p id="tracked-patients-box" class="statistic-box">42<br>Tracked Patients</p>
+        <p id="flagged-patients-box" class="statistic-box">9<br>Flagged Patients</p>
+        <p id="due-this-week-box" class="statistic-box">3<br>Due this Week</p>
+        <p id="high-risk-box" class="statistic-box">1<br>High Risk</p>
       </div>
 
       <br>
       <div id="graph-container">
-        <p id="pie-status">Prenatal / Postnatal</p>
-        <p id="pie-trimester">Patients by Trimester</p>
-        <p id="pie-text4baby">Text4Baby Enrollment</p>
+        <p id="pie-status">&nbsp;&nbsp;Prenatal / Postnatal</p>
+        <p id="pie-trimester">&nbsp;&nbsp;Patients by Trimester</p>
+        <p id="pie-text4baby">&nbsp;&nbsp;Text4Baby Enrollment</p>
       </div>
 
-      <br><br><br>
+      <br><br>
       <div id="items-due-container">
-        <!-- <h4>Items Due</h4> -->
         <table class="dashboard-table">
           <tr>
+            <th>Case Owner</th>
             <th>Flag</th>
             <th>Patient</th>
             <th>Last 4</th>
@@ -95,10 +95,11 @@ include_once '../_include/config.php';
             <th>Next Item Due</th>
           </tr>
           <tr>
+            <td>A. Smith</td>
             <td style='text-align: center; color: #EF9234'>
               <i class='fa-duotone fa-flag fa-lg'></i>
             </td>
-            <td>Patient, Brooke Anne</td>
+            <td>Renolds, Tina Q</td>
             <td>4567</td>
             <td>Prenatal</td>
             <td style='text-align: center; color: #A30000;'>
@@ -109,8 +110,9 @@ include_once '../_include/config.php';
             <td>06/30/2024</td>
           </tr>
           <tr>
+            <td>B. Jones</td>
             <td>&nbsp;</td>
-            <td>Onetwothree, Fourfivesix</td>
+            <td>Burke, Hanna Q</td>
             <td>1234</td>
             <td>First Trimester</td>
             <td>&nbsp;</td>
@@ -119,10 +121,11 @@ include_once '../_include/config.php';
             <td>07/01/2024</td>
           </tr>
           <tr>
+            <td>C. Johnson</td>
             <td style='text-align: center; color: #EF9234'>
               <i class='fa-duotone fa-flag fa-lg'></i>
             </td>
-            <td>Lastname, Firstname</td>
+            <td>Berry, Freida Q</td>
             <td>0202</td>
             <td>Second Trimester</td>
             <td style='text-align: center; color: #A30000;'>
@@ -133,12 +136,24 @@ include_once '../_include/config.php';
             <td>07/01/2024</td>
           </tr>
           <tr>
+            <td>A. Smith</td>
             <td style='text-align: center; color: #EF9234'>
               <i class='fa-duotone fa-flag fa-lg'></i>
             </td>
-            <td>Bell, Alexandra Graham</td>
+            <td>Long, Jenny Q</td>
             <td>0101</td>
             <td>Third Trimester</td>
+            <td>&nbsp;</td>
+            <td>07/05/2024</td>
+            <td>07/05/2024</td>
+            <td>07/05/2024</td>
+          </tr>
+          <tr>
+            <td>C. Johnson</td>
+            <td>&nbsp;</td>
+            <td>Perez, Jamie Q</td>
+            <td>1235</td>
+            <td>Postnatal</td>
             <td style='text-align: center; color: #A30000;'>
               <i class='fa-regular fa-circle-check fa-lg'></i>
             </td>
@@ -147,20 +162,57 @@ include_once '../_include/config.php';
             <td>07/05/2024</td>
           </tr>
           <tr>
+            <td>A. Smith</td>
+            <td>&nbsp;</td>
+            <td>Ernestine, Wanda Q</td>
+            <td>1234</td>
+            <td>First Trimester</td>
+            <td>&nbsp;</td>
+            <td>07/01/2024</td>
+            <td>07/01/2024</td>
+            <td>07/01/2024</td>
+          </tr>
+          <tr>
+            <td>A. Smith</td>
+            <td>&nbsp;</td>
+            <td>Walters, Sheila Q</td>
+            <td>1234</td>
+            <td>First Trimester</td>
+            <td>&nbsp;</td>
+            <td>07/01/2024</td>
+            <td>07/01/2024</td>
+            <td>07/01/2024</td>
+          </tr>
+          <tr>
+            <td>B. Jones</td>
             <td style='text-align: center; color: #EF9234'>
               <i class='fa-duotone fa-flag fa-lg'></i>
             </td>
-            <td>Personname, Personname</td>
-            <td>1235</td>
-            <td>Postnatal</td>
+            <td>Sullivan, Tracy Q</td>
+            <td>1234</td>
+            <td>First Trimester</td>
             <td>&nbsp;</td>
-            <td>07/05/2024</td>
-            <td>07/05/2024</td>
-            <td>07/05/2024</td>
+            <td>07/01/2024</td>
+            <td>07/01/2024</td>
+            <td>07/01/2024</td>
           </tr>
           <tr>
+            <td>A. Smith</td>
             <td>&nbsp;</td>
-            <td>Onetwothree, Fourfivesix</td>
+            <td>Miles, Rhoda Q</td>
+            <td>1234</td>
+            <td>First Trimester</td>
+            <td>&nbsp;</td>
+            <td>07/01/2024</td>
+            <td>07/01/2024</td>
+            <td>07/01/2024</td>
+          </tr>
+          <tr>
+            <td>C. Johnson</td>
+            <td style='text-align: center; color: #EF9234'>
+              <i class='fa-duotone fa-flag fa-lg'></i>
+            </td>
+            <td>Lawson, Jennifer Q</td>
             <td>1234</td>
             <td>First Trimester</td>
             <td>&nbsp;</td>
@@ -172,7 +224,7 @@ include_once '../_include/config.php';
       </div>
 
       <div class="table-footer">
-        <p class="align-left">Showing 1 to 6 of 42 rows</p>
+        <p class="align-left">Showing 1 to 10 of 42 rows</p>
         <p class="align-right"><a href="#">My List</a>&nbsp; | &nbsp;<a href="#">Show All</a>&nbsp;&nbsp;</p>
       </div>
       <div class="align-clear"></div>

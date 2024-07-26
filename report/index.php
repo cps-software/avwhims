@@ -73,7 +73,7 @@ require "./get_metadata.php";
       <br>
       <hr>
       <br>
-      <img src="../_image/jmu-msu.png" alt="JMU and MSI logos" class="container-image">
+      <img src="../_resource/image/jmu-msu.png" alt="JMU and MSI logos" class="container-image">
     </div>
   </main>
 

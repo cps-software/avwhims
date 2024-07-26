@@ -6,9 +6,10 @@
 }
 
 #db-container p {
-  margin: 4px;
+  margin: 0 12px;
+  padding: 12px;
   width: 25%;
-  height: 75px;
+  height: 65px;
   text-align: center;
   line-height: 125%;
 }
@@ -39,17 +40,19 @@
   display: flex;
   justify-content: space-around;
   color: lightslategray;
+  margin-top: 2px;
+  margin-bottom: 12px;
 }
 
 #pie-trimester,
 #pie-status,
 #pie-text4baby {
-  width: 175px;
-  height: 175px;
+  width: 165px;
+  height: 165px;
   border: 0;
   border-radius: 50%;
   background-color: aliceblue;
-  line-height: 385px;
+  line-height: 380px;
 }
 
 #pie-status {
@@ -76,10 +79,9 @@ h4 {
 .dashboard-table td,
 .dashboard-table th {
   border: 1px solid #B4B4B8;
-  padding: 8px;
+  padding: 4px;
   font-size: smaller;
 }
-
 
 /* .dashboard-table tr:nth-child(even) {
   background-color: ghostwhite;
@@ -90,8 +92,8 @@ h4 {
 }
 
 .dashboard-table th {
-  padding-top: 12px;
-  padding-bottom: 12px;
+  padding-top: 6px;
+  padding-bottom: 6px;
   text-align: center;
   background-color: #ddd;
   color: #31363F;
