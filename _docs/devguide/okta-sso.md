@@ -2,7 +2,6 @@
 
 ## Okta SSO Setup
 
-
 ### Create Okta Developer Account
 I signed up up for the Okta Developer Network service.  
 
