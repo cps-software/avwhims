@@ -4,7 +4,7 @@ Women's Health Interactive Management System
 A reference application for collaborative delivery and management of women's healthcare.
 
 ## Introduction
-The application is part of a series of reference applications that fall under the code name "AV", inspired by the early explorer, Amerigo Vespucci. The AV series explores various opportunities to support industry needs, such as drug risk management and women's healthcare management.
+This application is part of a series of reference applications that fall under the code name "AV", inspired by the early explorer, Amerigo Vespucci. The AV series explores various opportunities to support industry needs, such as drug risk management and women's healthcare management.
  
 AV WHIMS is a reference application that supports the HL7 SMART on FHIR application specification, and can be run as a standalone web applicaiton or as a SMART App within an electronic health record (EHR) container.
 
@@ -27,4 +27,4 @@ http://localhost/avwhims
 ```
 
 ## Additional Setup Information
-For details on application and supporting database setup, refer to the documents in the "/docs" folder.
+For details on application and supporting database setup, refer to the documents in the `/_docs` folder.
