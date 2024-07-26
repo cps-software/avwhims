@@ -1,0 +1,340 @@
+{
+  "resourceType": "CapabilityStatement",
+  "id": "health-api-clinical-fhir-r4-capability",
+  "version": "10.0.57",
+  "name": "API Management Platform | Clinical Health | FHIR R4",
+  "status": "active",
+  "date": "2024-05-10T00:04:31Z",
+  "publisher": "Department of Veterans Affairs",
+  "contact": [
+    {
+      "name": "API Support",
+      "telecom": [
+        {
+          "system": "email",
+          "value": "api@va.gov"
+        }
+      ]
+    }
+  ],
+  "description": "FHIR R4 Clinical Health APIs.",
+  "kind": "instance",
+  "instantiates": [
+    "http://hl7.org/fhir/us/core/CapabilityStatement/us-core-server"
+  ],
+  "software": {
+    "name": "health-api-clinical-fhir-r4"
+  },
+  "implementation": {
+    "description": "FHIR R4 Clinical Health APIs.",
+    "url": "https://sandbox-api.va.gov/services/clinical-fhir/v0/r4"
+  },
+  "fhirVersion": "4.0.1",
+  "format": [
+    "application/json",
+    "application/fhir+json"
+  ],
+  "rest": [
+    {
+      "mode": "server",
+      "security": {
+        "extension": [
+          {
+            "extension": [
+              {
+                "url": "token",
+                "valueUri": "https://sandbox-api.va.gov/oauth2/clinical-health/v2/token"
+              },
+              {
+                "url": "authorize",
+                "valueUri": "https://sandbox-api.va.gov/oauth2/clinical-health/v2/authorization"
+              },
+              {
+                "url": "revoke",
+                "valueUri": "https://sandbox-api.va.gov/oauth2/clinical-health/v2/revoke"
+              }
+            ],
+            "url": "http://fhir-registry.smarthealthit.org/StructureDefinition/oauth-uris"
+          }
+        ],
+        "cors": true,
+        "service": [
+          {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/ValueSet/restful-security-service",
+                "code": "SMART-on-FHIR",
+                "display": "SMART-on-FHIR"
+              }
+            ],
+            "text": "SMART-on-FHIR"
+          }
+        ],
+        "description": "http://docs.smarthealthit.org/"
+      },
+      "resource": [
+        {
+          "type": "AllergyIntolerance",
+          "profile": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-allergyintolerance",
+          "interaction": [
+            {
+              "code": "read",
+              "documentation": "Implemented per specification. See http://hl7.org/fhir/R4/http.html"
+            },
+            {
+              "code": "search-type",
+              "documentation": "Implemented per specification. See http://hl7.org/fhir/R4/http.html"
+            }
+          ],
+          "versioning": "no-version",
+          "referencePolicy": [
+            "literal",
+            "local"
+          ],
+          "searchParam": [
+            {
+              "name": "_id",
+              "type": "token"
+            },
+            {
+              "name": "identifier",
+              "type": "token"
+            },
+            {
+              "name": "patient",
+              "type": "reference"
+            }
+          ]
+        },
+        {
+          "type": "Condition",
+          "profile": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition",
+          "interaction": [
+            {
+              "code": "read",
+              "documentation": "Implemented per specification. See http://hl7.org/fhir/R4/http.html"
+            },
+            {
+              "code": "search-type",
+              "documentation": "Implemented per specification. See http://hl7.org/fhir/R4/http.html"
+            }
+          ],
+          "versioning": "no-version",
+          "referencePolicy": [
+            "literal",
+            "local"
+          ],
+          "searchParam": [
+            {
+              "name": "_id",
+              "type": "token"
+            },
+            {
+              "name": "category",
+              "type": "token"
+            },
+            {
+              "name": "clinical-status",
+              "type": "token"
+            },
+            {
+              "name": "identifier",
+              "type": "token"
+            },
+            {
+              "name": "patient",
+              "type": "reference"
+            }
+          ]
+        },
+        {
+          "type": "MedicationDispense",
+          "profile": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-medicationdispense",
+          "interaction": [
+            {
+              "code": "read",
+              "documentation": "Implemented per specification. See http://hl7.org/fhir/R4/http.html"
+            },
+            {
+              "code": "search-type",
+              "documentation": "Implemented per specification. See http://hl7.org/fhir/R4/http.html"
+            }
+          ],
+          "versioning": "no-version",
+          "referencePolicy": [
+            "literal",
+            "local"
+          ],
+          "searchParam": [
+            {
+              "name": "patient",
+              "type": "reference"
+            },
+            {
+              "name": "whenprepared",
+              "type": "date"
+            }
+          ]
+        },
+        {
+          "type": "MedicationRequest",
+          "profile": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-medicationrequest",
+          "interaction": [
+            {
+              "code": "read",
+              "documentation": "Implemented per specification. See http://hl7.org/fhir/R4/http.html"
+            },
+            {
+              "code": "search-type",
+              "documentation": "Implemented per specification. See http://hl7.org/fhir/R4/http.html"
+            }
+          ],
+          "versioning": "no-version",
+          "referencePolicy": [
+            "literal",
+            "local"
+          ],
+          "searchParam": [
+            {
+              "name": "-health-care-system",
+              "type": "string"
+            },
+            {
+              "name": "authoredon",
+              "type": "date"
+            },
+            {
+              "name": "identifier",
+              "type": "string"
+            },
+            {
+              "name": "patient",
+              "type": "reference"
+            }
+          ]
+        },
+        {
+          "type": "Observation",
+          "profile": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab",
+          "interaction": [
+            {
+              "code": "read",
+              "documentation": "Implemented per specification. See http://hl7.org/fhir/R4/http.html"
+            },
+            {
+              "code": "search-type",
+              "documentation": "Implemented per specification. See http://hl7.org/fhir/R4/http.html"
+            }
+          ],
+          "versioning": "no-version",
+          "referencePolicy": [
+            "literal",
+            "local"
+          ],
+          "searchParam": [
+            {
+              "name": "_id",
+              "type": "token"
+            },
+            {
+              "name": "category",
+              "type": "token"
+            },
+            {
+              "name": "code",
+              "type": "token"
+            },
+            {
+              "name": "date",
+              "type": "date"
+            },
+            {
+              "name": "identifier",
+              "type": "token"
+            },
+            {
+              "name": "patient",
+              "type": "reference"
+            }
+          ]
+        },
+        {
+          "type": "Patient",
+          "profile": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient",
+          "interaction": [
+            {
+              "code": "read",
+              "documentation": "Implemented per specification. See http://hl7.org/fhir/R4/http.html"
+            },
+            {
+              "code": "search-type",
+              "documentation": "Implemented per specification. See http://hl7.org/fhir/R4/http.html"
+            }
+          ],
+          "versioning": "no-version",
+          "referencePolicy": [
+            "literal",
+            "local"
+          ],
+          "searchParam": [
+            {
+              "name": "_id",
+              "type": "token"
+            },
+            {
+              "name": "identifier",
+              "type": "token"
+            }
+          ],
+          "operation": [
+            {
+              "name": "match",
+              "definition": "http://hl7.org/fhir/OperationDefinition/Patient-match"
+            }
+          ]
+        },
+        {
+          "type": "Practitioner",
+          "profile": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner",
+          "interaction": [
+            {
+              "code": "read",
+              "documentation": "Implemented per specification. See http://hl7.org/fhir/R4/http.html"
+            },
+            {
+              "code": "search-type",
+              "documentation": "Implemented per specification. See http://hl7.org/fhir/R4/http.html"
+            }
+          ],
+          "versioning": "no-version",
+          "referencePolicy": [
+            "literal",
+            "local"
+          ],
+          "searchParam": [
+            {
+              "name": "_id",
+              "type": "token"
+            },
+            {
+              "name": "family",
+              "type": "string"
+            },
+            {
+              "name": "given",
+              "type": "string"
+            },
+            {
+              "name": "identifier",
+              "type": "token"
+            },
+            {
+              "name": "name",
+              "type": "string"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
