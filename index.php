@@ -26,7 +26,7 @@ session_start();
   <link rel="stylesheet" href="./_resource/style/main.css">
   <title>AVWHIMS</title>
 
-  <!-- clear cookie session variable so startup modal displays on first visit -->
+  <!-- JS script to clear cookie session variable so startup modal displays on first visit -->
   <script>
     sessionStorage.removeItem('accepted');
   </script>
@@ -53,13 +53,12 @@ session_start();
         <input class="btn-sso" type="submit" name="submit" value="Log In using Single Sign-On">
       </form>
     </div>
+    <footer>
+      <?php
+      include "./_include/footer.php";
+      ?>
+    </footer>
   </main>
-  <footer>
-    <?php
-    include "./_include/footer.php";
-    ?>
-  </footer>
-
 </body>
 
 </html>
