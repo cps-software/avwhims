@@ -51,7 +51,7 @@ include_once '../_include/config.php';
       <li><a href="#">Flagged Patients</a></li>
       <li><a href="#">Due this Week</a></li>
       <li><a href="#">High Risk</a></li>
-      <li><a href="add.php">Add New Patient</a></li>
+      <!-- <li><a href="add.php">Add New Patient</a></li> -->
     </ul>
   </nav>
 
@@ -68,9 +68,9 @@ include_once '../_include/config.php';
 
       <div id="db-container">
         <p id="tracked-patients-box" class="statistic-box">42<br>Tracked Patients</p>
-        <p id="flagged-patients-box" class="statistic-box">9<br>Flagged Patients</p>
-        <p id="due-this-week-box" class="statistic-box">3<br>Due this Week</p>
-        <p id="high-risk-box" class="statistic-box">1<br>High Risk</p>
+        <p id="flagged-patients-box" class="statistic-box">15<br>Flagged Patients</p>
+        <p id="due-this-week-box" class="statistic-box">9<br>Due this Week</p>
+        <p id="high-risk-box" class="statistic-box">4<br>High Risk</p>
       </div>
 
       <br>
@@ -88,7 +88,7 @@ include_once '../_include/config.php';
             <th>Flag</th>
             <th>Patient</th>
             <th>Last 4</th>
-            <th>Pregnancy State</th>
+            <th>Subprogram</th>
             <th>High Risk</th>
             <th>Last Contact</th>
             <th>Next Contact</th>
@@ -101,7 +101,7 @@ include_once '../_include/config.php';
             </td>
             <td>Renolds, Tina Q</td>
             <td>4567</td>
-            <td>Prenatal</td>
+            <td>Maternity Care</td>
             <td style='text-align: center; color: #A30000;'>
               <i class='fa-regular fa-circle-check fa-lg'></i>
             </td>
@@ -114,7 +114,7 @@ include_once '../_include/config.php';
             <td>&nbsp;</td>
             <td>Burke, Hanna Q</td>
             <td>1234</td>
-            <td>First Trimester</td>
+            <td>Maternity Care</td>
             <td>&nbsp;</td>
             <td>07/01/2024</td>
             <td>07/01/2024</td>
@@ -127,7 +127,7 @@ include_once '../_include/config.php';
             </td>
             <td>Berry, Freida Q</td>
             <td>0202</td>
-            <td>Second Trimester</td>
+            <td>Fertility & Family Building</td>
             <td style='text-align: center; color: #A30000;'>
               <i class='fa-regular fa-circle-check fa-lg'></i>
             </td>
@@ -142,7 +142,7 @@ include_once '../_include/config.php';
             </td>
             <td>Long, Jenny Q</td>
             <td>0101</td>
-            <td>Third Trimester</td>
+            <td>Breast Cancer Screening</td>
             <td>&nbsp;</td>
             <td>07/05/2024</td>
             <td>07/05/2024</td>
@@ -153,7 +153,7 @@ include_once '../_include/config.php';
             <td>&nbsp;</td>
             <td>Perez, Jamie Q</td>
             <td>1235</td>
-            <td>Postnatal</td>
+            <td>Cervical Cancer Screening</td>
             <td style='text-align: center; color: #A30000;'>
               <i class='fa-regular fa-circle-check fa-lg'></i>
             </td>
@@ -166,7 +166,7 @@ include_once '../_include/config.php';
             <td>&nbsp;</td>
             <td>Ernestine, Wanda Q</td>
             <td>1234</td>
-            <td>First Trimester</td>
+            <td>Breast Cancer Screening</td>
             <td>&nbsp;</td>
             <td>07/01/2024</td>
             <td>07/01/2024</td>
@@ -177,7 +177,7 @@ include_once '../_include/config.php';
             <td>&nbsp;</td>
             <td>Walters, Sheila Q</td>
             <td>1234</td>
-            <td>First Trimester</td>
+            <td>Cervical Cancer Screening</td>
             <td>&nbsp;</td>
             <td>07/01/2024</td>
             <td>07/01/2024</td>
@@ -190,7 +190,7 @@ include_once '../_include/config.php';
             </td>
             <td>Sullivan, Tracy Q</td>
             <td>1234</td>
-            <td>First Trimester</td>
+            <td>Maternity Care</td>
             <td>&nbsp;</td>
             <td>07/01/2024</td>
             <td>07/01/2024</td>
@@ -201,7 +201,7 @@ include_once '../_include/config.php';
             <td>&nbsp;</td>
             <td>Miles, Rhoda Q</td>
             <td>1234</td>
-            <td>First Trimester</td>
+            <td>Maternity Care</td>
             <td>&nbsp;</td>
             <td>07/01/2024</td>
             <td>07/01/2024</td>
@@ -214,7 +214,7 @@ include_once '../_include/config.php';
             </td>
             <td>Lawson, Jennifer Q</td>
             <td>1234</td>
-            <td>First Trimester</td>
+            <td>Fertility & Familyt Building</td>
             <td>&nbsp;</td>
             <td>07/01/2024</td>
             <td>07/01/2024</td>

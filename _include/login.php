@@ -130,7 +130,7 @@ include_once "./dbconnect.php";
             // debug version that adds a delay
             print("<script>setTimeout(function() {getHome()},3000);</script>");
             print("<h3>");
-            print("<a class='btn' href='./dashboard/' >Continue to Site</a>");
+            print("<a class='btn' href='../dashboard/' >Continue to Site</a>");
             print("</h3>");
           } else {
             // Destroy Session

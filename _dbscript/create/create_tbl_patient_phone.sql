@@ -4,19 +4,19 @@ USE avwhims;
 
 CREATE TABLE patient_phone
 (
-  patient_phone_id int AUTO_INCREMENT NOT NULL PRIMARY KEY,
-  patient_id int NOT NULL,
-  patient_phone_type int NOT NULL,
-  patient_phone_priority int NOT NULL,
-  patient_phone_country varchar(4) NOT NULL,
-  patient_phone_area varchar(3) NOT NULL,
-  patient_phone_number varchar(16) NOT NULL,
+  patient_phone_id  int         NOT NULL PRIMARY KEY AUTO_INCREMENT,
+  patient_id        int         NOT NULL,
+  phone_type        int         NOT NULL, /* e.g., home, work, mobile */
+  priority          int         NOT NULL, /* first, second, etc. */
+  country_code      varchar(4)  NOT NULL,
+  area_code         varchar(3)  NOT NULL,
+  phone_number      varchar(16) NOT NULL,
     INDEX
     (
         patient_id
     ),
     INDEX
     (
-        patient_phone_type
+        phone_type
     )
 );
